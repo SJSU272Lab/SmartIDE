@@ -12,10 +12,10 @@ Our structure is illustrated as the figure below. When encountering an error for
 ![Structure](abstract/abstract.png?raw=true)
 
 
-## Senario
+## User Stories
 
 ### Example 1
-George, a new Java programmer, wanted to start his first line of code. However, he accidently deleted `M` in the class name. 
+As a student, George wanted to understand the error of his code. He started his first line of code. However, he accidently deleted `M` in the class name. 
 
 ```java
 class Printessage
@@ -38,7 +38,7 @@ Error: Could not find or load main class smartide.PrintMessage
 Smart IDE first searched through our data base for similar questions. It revealed a human readable answer next to the error message where George could instantly understand the reason for this error. Also, SMART IDE would ask him if it can revise the error for him. 
 
 ### Example 2
-Let's take a look at another example. Anita who a software programmer is currently working on a project. She needed to insert strings into `map` and `set` within the map. She is struggling writting the code she wanted since she used to work in python not C++.
+As a senior software programmer, Anita wanted to find methods for the language she is not familiar with. She needed to insert strings into `map` and `set` within the map. She is struggling writting the code she wanted since she does not work in C++ previously.
 
 ```c++
 int main()
@@ -66,4 +66,4 @@ The SMART IDE found two methods in database and recommended both methods to her.
 
 ```
 
-Those two examples are very common problems even for experienced programmers. The first one is that we simply do not understand error messages. The latter one is not know the laguage very well. In old fashion, both demonstrate one common thing: Open browser and google it! Creating a SMART IDE would improve our productivity and make the lives earsier for other software developers as well.
+Those two stories are very common problems even for both new and experienced programmers. The first one is that we simply do not understand error messages. The latter one is not knowing the laguage very well. In old fashion, both users would do one common thing: Open browser and google it! Creating a SMART IDE would improve our productivity and also make the lives earsier for other software developers.
