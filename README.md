@@ -14,7 +14,7 @@ Our structure is illustrated as the figure below. When encountering an error for
 
 ## User Stories
 
-### Example 1
+### Persona 1
 As a student, George wanted to understand the error of his code. He started his first line of code. However, he accidently deleted `M` in the class name. 
 
 ```java
@@ -37,7 +37,7 @@ Error: Could not find or load main class smartide.PrintMessage
 
 Smart IDE first searched through our data base for similar questions. It revealed a human readable answer next to the error message where George could instantly understand the reason for this error. Also, SMART IDE would ask him if it can revise the error for him. 
 
-### Example 2
+### Persona 2
 As a senior software programmer, Anita wanted to find methods for the language she is not familiar with. She needed to insert strings into `map` and `set` within the map. She is struggling writting the code she wanted since she does not work in C++ previously.
 
 ```c++
