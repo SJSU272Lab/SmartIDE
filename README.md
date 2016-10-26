@@ -8,7 +8,8 @@ As programmers, when writing code, we come across errors. It is very often we ha
 ## Mechanism
 
 Our structure is illustrated as the figure below. When encountering an error for the first time, SMART IDE directly provide the result through Google searching. Then it stores this question and answer pair in our database. In future, when other users come across same problem, the SMART IDE will first look through our database for the answer before searching Google. Furthermore, we would like to incorporate machine learning to analysis our Q&A pairs in our database. First, it will categorize questions so there would not be repeating questions. Secondly, since there might be different answers for each question, we would recommend the most suitable answer base on current situation.
-![Structure](https://www.dropbox.com/s/o0c7dtriwj4tjd6/Screenshot%202016-10-25%2020.48.37.png)
+
+![Structure](https://drive.google.com/open?id=0B1NlywXA9jDTX3V5bFgybTlFTWc)
 
 
 ## Senario
