@@ -38,7 +38,7 @@ Error: Could not find or load main class smartide.PrintMessage
 Smart IDE first searched through our data base for similar questions. It revealed a human readable answer next to the error message where George could instantly understand the reason for this error. Also, SMART IDE would ask him if it can revise the error for him. 
 
 ### Example 2
-Let's take look at another example. Anita who a software programmer is currently working on a project. She needed to insert strings into `map` and `set` within the map. She is struggle writting the code she wanted since she used to work in python not C++.
+Let's take a look at another example. Anita who a software programmer is currently working on a project. She needed to insert strings into `map` and `set` within the map. She is struggling writting the code she wanted since she used to work in python not C++.
 
 ```c++
 int main()
@@ -66,4 +66,4 @@ The SMART IDE found two methods in database and recommended both methods to her.
 
 ```
 
-Those two examples are very common problems even for experienced programmers. The first one is that we simply do not understand error messages. The latter one is not know the laguage very well. In old fashion, both demonstrate one common thing: Open browser and google it! We would like to improve our productivity and make the lives earsier for other software developers as well.
+Those two examples are very common problems even for experienced programmers. The first one is that we simply do not understand error messages. The latter one is not know the laguage very well. In old fashion, both demonstrate one common thing: Open browser and google it! Creating a SMART IDE would improve our productivity and make the lives earsier for other software developers as well.
