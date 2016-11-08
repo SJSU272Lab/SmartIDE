@@ -1,0 +1,11 @@
+version: '1'
+services:
+  controller:
+    build: control/.
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/control
+    links:
+     - db
+
