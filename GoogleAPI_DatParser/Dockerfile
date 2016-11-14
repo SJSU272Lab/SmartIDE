@@ -7,4 +7,4 @@ RUN pip install -qr /tmp/requirements.txt
 ADD ./GoogleAPI /opt/GoogleAPI/
 WORKDIR /opt/GoogleAPI/
 EXPOSE 5000
-CMD ["python", "Hello.py"]
+CMD ["python", "googleapi.py"]

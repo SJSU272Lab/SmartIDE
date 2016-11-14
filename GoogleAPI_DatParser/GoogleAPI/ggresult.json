@@ -1,0 +1,571 @@
+{
+    "context": {
+        "title": "Stackoverflow"
+    }, 
+    "items": [
+        {
+            "cacheId": "QLC8CcukdIAJ", 
+            "displayLink": "stackoverflow.com", 
+            "formattedUrl": "stackoverflow.com/.../a-stdmap-that-keep-track-of-the-order-of-insertion", 
+            "htmlFormattedUrl": "stackoverflow.com/.../a-std<b>map</b>-that-keep-track-of-the-order-of-insertion", 
+            "htmlSnippet": "I currently have a std::<b>map</b>&lt;std::string,int&gt; that stores an integer value ... If you <br>\nhave only 50 values in std::<b>map</b> you could copy them to std::vector&nbsp;...", 
+            "htmlTitle": "<b>c++</b> - A std::<b>map</b> that keep track of the order of insertion? - Stack ...", 
+            "kind": "customsearch#result", 
+            "link": "http://stackoverflow.com/questions/1098175/a-stdmap-that-keep-track-of-the-order-of-insertion", 
+            "pagemap": {
+                "answer": [
+                    {
+                        "text": "If you have only 50 values in std::map you could copy them to std::vector before printing out and sort via std::sort using appropriate functor. Or you could use boost::multi_index. It allows...", 
+                        "upvotecount": "43"
+                    }, 
+                    {
+                        "text": "You might combine a std::vector with a std::tr1::unordered_map (a hash table). Here's a link to Boost's documentation for unordered_map. You can use the vector to keep track of the insertion...", 
+                        "upvotecount": "14"
+                    }, 
+                    {
+                        "text": "Keep a parallel list<string> insertionOrder. When it is time to print, iterate on the list and do lookups into the map. each element in insertionOrder // walks in insertionOrder.. print map[...", 
+                        "upvotecount": "8"
+                    }, 
+                    {
+                        "text": "If you need both lookup strategies, you will end up with two containers. You may use a vector with your actual values (ints), and put a map< string, vector< T >::difference_type> next to it,...", 
+                        "upvotecount": "4"
+                    }, 
+                    {
+                        "text": "You cannot do that with a map, but you could use two separate structures - the map and the vector and keep them synchronized - that is when you delete from the map, find and delete the element...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "This is somewhat related to Faisals answer. You can just create a wrapper class around a map and vector and easily keep them synchronized. Proper encapsulation will let you control the access...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "Another way to implement this is with a map instead of a vector. I will show you this approach and discuss the differences: Just create a class that has two maps behind the scenes. #include...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "// Should be like this man! // This maintains the complexity of insertion is O(logN) and deletion is also O(logN). class SpecialMap { private: int counter_; map<int, string> insertion_order_;...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "Use boost::multi_index with map and list indices.", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "Here is solution that requires only standard template library without using boost's multiindex: You could use std::map<std::string,int>; and vector <data>; where in map you store the index...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "One thing you need to consider is the small number of data elements you are using. It is possible that it will be faster to use just the vector. There is some overhead in the map that can cause...", 
+                        "upvotecount": "0"
+                    }, 
+                    {
+                        "text": "What you want (without resorting to Boost) is what I call an \"ordered hash\", which is essentially a mashup of a hash and a linked list with string or integer keys (or both at the same time)....", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "height": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "width": "225"
+                    }
+                ], 
+                "metatags": [
+                    {
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "og:type": "website", 
+                        "og:url": "http://stackoverflow.com/questions/1098175/a-stdmap-that-keep-track-of-the-order-of-insertion", 
+                        "twitter:app:country": "US", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:id:iphone": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/1098175/a-stdmap-that-keep-track-of-the-order-of-insertion", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/1098175/a-stdmap-that-keep-track-of-the-order-of-insertion", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/1098175/a-stdmap-that-keep-track-of-the-order-of-insertion", 
+                        "twitter:card": "summary", 
+                        "twitter:description": "I currently have a std::map&lt;std::string,int&gt;  that stores an integer value to an unique string identifier, and I do look up with the string. It does mostly what I want, except for that it doe...", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:title": "A std::map that keep track of the order of insertion?"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "description": "I currently have a std::map<std::string,int> that stores an integer value to an unique string identifier, and I do look up with the string. It does mostly what I want, except for that it doe...", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "A std::map that keep track of the order of insertion?", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "title": "A std::map that keep track of the order of insertion?"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "12", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "A std::map that keep track of the order of insertion?", 
+                        "text": "I currently have a std::map<std::string,int> that stores an integer value to an unique string identifier, and I do look up with the string. It does mostly what I want, except for that it does...", 
+                        "upvotecount": "64"
+                    }
+                ]
+            }, 
+            "snippet": "I currently have a std::map<std::string,int> that stores an integer value ... If you \nhave only 50 values in std::map you could copy them to std::vector\u00a0...", 
+            "title": "c++ - A std::map that keep track of the order of insertion? - Stack ..."
+        }, 
+        {
+            "cacheId": "Mb-ZXkJHdjYJ", 
+            "displayLink": "stackoverflow.com", 
+            "formattedUrl": "stackoverflow.com/.../in-stl-maps-is-it-better-to-use-mapinsert-than", 
+            "htmlFormattedUrl": "stackoverflow.com/.../in-stl-<b>maps</b>-is-it-better-to-use-<b>map</b>insert-than", 
+            "htmlSnippet": "A while ago, I had a discussion with a colleague about how to insert ... When you <br>\nwrite <b>map</b>[key] = value;. there&#39;s no way to tell if you replaced the&nbsp;...", 
+            "htmlTitle": "<b>c++</b> - In STL <b>maps</b>, is it better to use <b>map</b>::insert than []? - Stack ...", 
+            "kind": "customsearch#result", 
+            "link": "http://stackoverflow.com/questions/326062/in-stl-maps-is-it-better-to-use-mapinsert-than", 
+            "pagemap": {
+                "answer": [
+                    {
+                        "text": "When you write map[key] = value; there's no way to tell if you replaced the value for key, or if you created a new key with value. map::insert() will only create: using std::cout; using std::endl;...", 
+                        "upvotecount": "180"
+                    }, 
+                    {
+                        "text": "The two have different semantics when it comes to the key already existing in the map. So they aren't really directly comparable. But the operator[] version requires default constructing the...", 
+                        "upvotecount": "37"
+                    }, 
+                    {
+                        "text": "Another thing to note with std::map: myMap[nonExistingKey]; will create a new entry in the map, keyed to nonExistingKey initialized to a default value. This scared the hell out of me the first...", 
+                        "upvotecount": "22"
+                    }, 
+                    {
+                        "text": "If the performance hit of the default constructor isn't an issue, the please, for the love of god, go with the more readable version. :)", 
+                        "upvotecount": "15"
+                    }, 
+                    {
+                        "text": "If your application is speed critical i will advice using [] operator because it creates total 3 copies of the original object out of which 2 are temporary objects and sooner or later destroyed...", 
+                        "upvotecount": "9"
+                    }, 
+                    {
+                        "text": "A gotcha with map::insert() is that it won't replace a value if the key already exists in the map. I've seen C++ code written by Java programmers where they have expected insert() to behave...", 
+                        "upvotecount": "7"
+                    }, 
+                    {
+                        "text": "Now in c++11 I think that the best way to insert a pair in a STL map is: typedef std::map<int, std::string> MyMap; MyMap map; auto& result = map.emplace(3,\"Hello\"); The result will be a pair...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "insert is better from the point of exception safety. The expression map[key] = value is actually two operations: map[key] - creating a map element with default value. = value - copying the...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "One note is that you can also use Boost.Assign: using namespace std; using namespace boost::assign; // bring 'map_list_of()' into scope void something() { map<int,int> my_map = map_list_of(1,2)(2,3...", 
+                        "upvotecount": "2"
+                    }, 
+                    {
+                        "text": "Here's another example, showing that operator[] overwrites the value for the key if it exists, but .insert does not overwrite the value if it exists. void mapTest() { map<int,float> m; for(...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "The fact that std::map insert() function doesn't overwrite value associated with the key allows us to write object enumeration code like this: string word; map<string, size_t> dict; while(getline(c...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "This is a rather restricted case, but judging from the comments I've received I think it's worth noting. I've seen people in the past use maps in the form of map< const key, const val> Map;...", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "height": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "width": "225"
+                    }
+                ], 
+                "metatags": [
+                    {
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "og:type": "website", 
+                        "og:url": "http://stackoverflow.com/questions/326062/in-stl-maps-is-it-better-to-use-mapinsert-than", 
+                        "twitter:app:country": "US", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:id:iphone": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/326062/in-stl-maps-is-it-better-to-use-mapinsert-than", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/326062/in-stl-maps-is-it-better-to-use-mapinsert-than", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/326062/in-stl-maps-is-it-better-to-use-mapinsert-than", 
+                        "twitter:card": "summary", 
+                        "twitter:description": "A while ago, I had a discussion with a colleague about how to insert values in STL maps.  I preferred map[key] = value; because it feels natural and is clear to read whereas he preferred map.insert...", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:title": "In STL maps, is it better to use map::insert than []?"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "description": "A while ago, I had a discussion with a colleague about how to insert values in STL maps. I preferred map[key] = value; because it feels natural and is clear to read whereas he preferred map.insert...", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "In STL maps, is it better to use map::insert than []?", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "title": "In STL maps, is it better to use map::insert than []?"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "12", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "In STL maps, is it better to use map::insert than []?", 
+                        "text": "A while ago, I had a discussion with a colleague about how to insert values in STL maps. I preferred map[key] = value; because it feels natural and is clear to read whereas he preferred map.insert(...", 
+                        "upvotecount": "145"
+                    }
+                ]
+            }, 
+            "snippet": "A while ago, I had a discussion with a colleague about how to insert ... When you \nwrite map[key] = value;. there's no way to tell if you replaced the\u00a0...", 
+            "title": "c++ - In STL maps, is it better to use map::insert than []? - Stack ..."
+        }, 
+        {
+            "cacheId": "Cvmxg8pwfHgJ", 
+            "displayLink": "stackoverflow.com", 
+            "formattedUrl": "stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/647054/porting-std<b>map</b>-to-c", 
+            "htmlSnippet": "I am porting some <b>c++</b> code to c. What is a viable equivalent of ... uthash &quot;an easy<br>\n-to-use hash table for C structures.&quot; .... That is certainly one&nbsp;...", 
+            "htmlTitle": "<b>c++</b> - Porting std::<b>map</b> to C? - Stack Overflow", 
+            "kind": "customsearch#result", 
+            "link": "http://stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+            "pagemap": {
+                "answer": [
+                    {
+                        "text": "uthash \"an easy-to-use hash table for C structures.\" via: http://en.wikipedia.org/wiki/Hash_table", 
+                        "upvotecount": "16"
+                    }, 
+                    {
+                        "text": "Many C implementations support tsearch(3) or hsearch(3). tsearch(3) is a binary tree and you can provide a comparator callback. I think that's about as close as you're going to get to a std::map....", 
+                        "upvotecount": "14"
+                    }, 
+                    {
+                        "text": "That is certainly one possible implementation. You might want to consider how you'll implement the indexing and what performance impact that will have. For example, you could have the intKey...", 
+                        "upvotecount": "5"
+                    }, 
+                    {
+                        "text": "Why don't you just wrap a C interface around std::map? Ie write a few C++ functions in their own module: typedef std::map<int, char*> Map; extern \"C\" { void* map_create() { return reinterpret_cast<...", 
+                        "upvotecount": "5"
+                    }, 
+                    {
+                        "text": "You can implement it however you choose. If you use a linked-list approach your insertion will be O(1) but your retrieval and deletion will be O(n). If you use something more complex like a...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "I have tried implementing a map in C, it is based on void * http://code.google.com/p/cstl/ It is work in progress, but map is complete. http://code.google.com/p/cstl/source/browse/src/c_map.c...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "There is no standard library in C that provides functionality analogous to a map. You will need to implement your own map-like functionality using some form of container that supports accessing...", 
+                        "upvotecount": "0"
+                    }, 
+                    {
+                        "text": "man dbopen Provide NULL as the file argument and it'll be an in-memory only container for key/value data. There is also various Berkeley database library interfaces with similar key/value functiona...", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "height": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "width": "225"
+                    }
+                ], 
+                "metatags": [
+                    {
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "og:type": "website", 
+                        "og:url": "http://stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+                        "twitter:app:country": "US", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:id:iphone": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/647054/porting-stdmap-to-c", 
+                        "twitter:card": "summary", 
+                        "twitter:description": "I am porting some c++ code to c. What is a viable equivalent of std::map in c?  I know there is no equivalent in c.  This is what I am thinking of using:  In c++:  std::map&lt; uint, sTexture &gt;", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:title": "Porting std::map to C?"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "description": "I am porting some c++ code to c. What is a viable equivalent of std::map in c? I know there is no equivalent in c. This is what I am thinking of using: In c++: std::map< uint, sTexture >", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "Porting std::map to C?", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "title": "Porting std::map to C?"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "8", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "Porting std::map to C?", 
+                        "text": "I am porting some c++ code to c. What is a viable equivalent of std::map in c? I know there is no equivalent in c. This is what I am thinking of using: In c++: std::map< uint, sTexture > m_Textures...", 
+                        "upvotecount": "10"
+                    }
+                ]
+            }, 
+            "snippet": "I am porting some c++ code to c. What is a viable equivalent of ... uthash \"an easy\n-to-use hash table for C structures.\" .... That is certainly one\u00a0...", 
+            "title": "c++ - Porting std::map to C? - Stack Overflow"
+        }, 
+        {
+            "cacheId": "hYVARGOlrIsJ", 
+            "displayLink": "stackoverflow.com", 
+            "formattedUrl": "stackoverflow.com/questions/.../how-to-loop-through-a-c-map", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/.../how-to-loop-through-a-c-<b>map</b>", 
+            "htmlSnippet": "How would I loop through a <b>map</b> in <b>c++</b> i&#39;ve searched but none seem ... You can <br>\nuse an iterator. typedef std::<b>map</b>&lt;std::string, std::<b>map</b>&lt;std::string,&nbsp;...", 
+            "htmlTitle": "How to loop through a <b>c++ map</b> - Stack Overflow", 
+            "kind": "customsearch#result", 
+            "link": "http://stackoverflow.com/questions/4844886/how-to-loop-through-a-c-map", 
+            "pagemap": {
+                "answer": [
+                    {
+                        "text": "You can use an iterator. typedef std::map<std::string, std::map<std::string, std::string>>::iterator it_type; for(it_type iterator = m.begin(); iterator != m.end(); iterator++) { // iterator->first...", 
+                        "upvotecount": "266"
+                    }, 
+                    {
+                        "text": "Old question but the remaining answers are outdated as of C++11 - you can simply do: std::map<std::string, std::map<std::string, std::string>> mymap; for(auto const& ent1 : mymap) { // ent1.first...", 
+                        "upvotecount": "412"
+                    }, 
+                    {
+                        "text": "for(std::map<std::string, std::map<std::string, std::string> >::iterator outer_iter=map.begin(); outer_iter!=map.end(); ++outer_iter) { for(std::map<std::string, std::string>::iterator inner_iter=o...", 
+                        "upvotecount": "53"
+                    }, 
+                    {
+                        "text": "Do something like this: typedef std::map<std::string, std::string> InnerMap; typedef std::map<std::string, InnerMap> OuterMap; Outermap mm; ...//set the initial values for (OuterMap::iterator...", 
+                        "upvotecount": "22"
+                    }, 
+                    {
+                        "text": "C++11: std::map< std::string, std::map<std::string, std::string> > m; m[\"name1\"][\"value1\"] = \"data1\"; m[\"name1\"][\"value2\"] = \"data2\"; m[\"name2\"][\"value1\"] = \"data1\"; m[\"name2\"][\"value2\"] =...", 
+                        "upvotecount": "10"
+                    }, 
+                    {
+                        "text": "In C++17, you should be able to use the \"structured bindings\" feature, which lets you define multiple variables, with different names, using a single tuple/pair. Example: for (const auto& [name,...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "use std::map< std::string, std::map<std::string, std::string> >::const_iterator when map is const.", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "height": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "width": "225"
+                    }
+                ], 
+                "metatags": [
+                    {
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "og:type": "website", 
+                        "og:url": "http://stackoverflow.com/questions/4844886/how-to-loop-through-a-c-map", 
+                        "twitter:app:country": "US", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:id:iphone": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/4844886/how-to-loop-through-a-c-map", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/4844886/how-to-loop-through-a-c-map", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/4844886/how-to-loop-through-a-c-map", 
+                        "twitter:card": "summary", 
+                        "twitter:description": "How would I loop through a map in c++ i've searched but none seem to work for me. My map is defined as follows  std::map&lt; std::string, std::map&lt;std::string, std::string&gt; &gt;  So for example", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:title": "How to loop through a c++ map"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "description": "How would I loop through a map in c++ i've searched but none seem to work for me. My map is defined as follows std::map< std::string, std::map<std::string, std::string> > So for example", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "How to loop through a c++ map", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "title": "How to loop through a c++ map"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "7", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "How to loop through a c++ map", 
+                        "text": "How would I loop through a map in c++ i've searched but none seem to work for me. My map is defined as follows std::map< std::string, std::map<std::string, std::string> > So for example this...", 
+                        "upvotecount": "205"
+                    }
+                ]
+            }, 
+            "snippet": "How would I loop through a map in c++ i've searched but none seem ... You can \nuse an iterator. typedef std::map<std::string, std::map<std::string,\u00a0...", 
+            "title": "How to loop through a c++ map - Stack Overflow"
+        }, 
+        {
+            "cacheId": "RidbzT2eBawJ", 
+            "displayLink": "stackoverflow.com", 
+            "formattedUrl": "stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+            "htmlSnippet": "Moving some code from Python to C++. BASEPAIRS = { &quot;T&quot;: &quot;A&quot;, &quot;A&quot;: ... If you are <br>\ninto optimization, and assuming the input is always one of the&nbsp;...", 
+            "htmlTitle": "<b>map</b> - Simple dictionary in <b>C++</b> - Stack Overflow", 
+            "kind": "customsearch#result", 
+            "link": "http://stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+            "pagemap": {
+                "answer": [
+                    {
+                        "text": "If you are into optimization, and assuming the input is always one of the four characters, the function below might be worth a try as a replacement for the map: char map(const char in) { return...", 
+                        "upvotecount": "8"
+                    }, 
+                    {
+                        "text": "You can use the following syntax: std::map<char, char> my_map = { { 'A', '1' }, { 'B', '2' }, { 'C', '3' } };", 
+                        "upvotecount": "22"
+                    }, 
+                    {
+                        "text": "While using a std::map is fine or using a 256-sized char table would be fine, you could save yourself an enormous amount of space agony by simply using an enum. If you have C++11 features,...", 
+                        "upvotecount": "11"
+                    }, 
+                    {
+                        "text": "Until I was really concerned about performance, I would use a function, that takes a base and returns its match: char base_pair(char base) { switch(base) { case 'T': return 'A'; ... etc default:...", 
+                        "upvotecount": "9"
+                    }, 
+                    {
+                        "text": "A table out of char array: char map[256] = { 0 }; map['T'] = 'A'; map['A'] = 'T'; map['C'] = 'G'; map['G'] = 'C'; /* .... */", 
+                        "upvotecount": "5"
+                    }, 
+                    {
+                        "text": "Here's the map solution: #include <iostream> #include <map> typedef std::map<char, char> BasePairMap; int main() { BasePairMap m; m['A'] = 'T'; m['T'] = 'A'; m['C'] = 'G'; m['G'] = 'C'; std::cout...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "BASEPAIRS = { \"T\": \"A\", \"A\": \"T\", \"G\": \"C\", \"C\": \"G\" } What would you use? Maybe: static const char basepairs[] = \"ATAGCG\"; // lookup: if (const char* p = strchr(basepairs, c)) // use p[1] ;-)", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "This is the fastest, simplest, smallest space solution I can think of. A good optimizing compiler will even remove the cost of accessing the pair and name arrays. This solution works equally...", 
+                        "upvotecount": "1"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "height": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "width": "225"
+                    }
+                ], 
+                "metatags": [
+                    {
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "og:type": "website", 
+                        "og:url": "http://stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+                        "twitter:app:country": "US", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:id:iphone": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/15151480/simple-dictionary-in-c", 
+                        "twitter:card": "summary", 
+                        "twitter:description": "Moving some code from Python to C++.  BASEPAIRS = { \"T\": \"A\", \"A\": \"T\", \"G\": \"C\", \"C\": \"G\" }  Thinking maps might be overkill?  What would you use?", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:title": "Simple dictionary in C++"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "description": "Moving some code from Python to C++. BASEPAIRS = { \"T\": \"A\", \"A\": \"T\", \"G\": \"C\", \"C\": \"G\" } Thinking maps might be overkill? What would you use?", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "Simple dictionary in C++", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "title": "Simple dictionary in C++"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "8", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "Simple dictionary in C++", 
+                        "text": "Moving some code from Python to C++. BASEPAIRS = { \"T\": \"A\", \"A\": \"T\", \"G\": \"C\", \"C\": \"G\" } Thinking maps might be overkill? What would you use?", 
+                        "upvotecount": "16"
+                    }
+                ]
+            }, 
+            "snippet": "Moving some code from Python to C++. BASEPAIRS = { \"T\": \"A\", \"A\": ... If you are \ninto optimization, and assuming the input is always one of the\u00a0...", 
+            "title": "map - Simple dictionary in C++ - Stack Overflow"
+        }
+    ], 
+    "kind": "customsearch#search", 
+    "queries": {
+        "nextPage": [
+            {
+                "count": 5, 
+                "cx": "011247095799164362687:htc6tt21zii", 
+                "inputEncoding": "utf8", 
+                "language": "lang_en", 
+                "outputEncoding": "utf8", 
+                "safe": "off", 
+                "searchTerms": "c++ map", 
+                "startIndex": 6, 
+                "title": "Google Custom Search - c++ map", 
+                "totalResults": "531000"
+            }
+        ], 
+        "request": [
+            {
+                "count": 5, 
+                "cx": "011247095799164362687:htc6tt21zii", 
+                "inputEncoding": "utf8", 
+                "language": "lang_en", 
+                "outputEncoding": "utf8", 
+                "safe": "off", 
+                "searchTerms": "c++ map", 
+                "startIndex": 1, 
+                "title": "Google Custom Search - c++ map", 
+                "totalResults": "531000"
+            }
+        ]
+    }, 
+    "searchInformation": {
+        "formattedSearchTime": "0.56", 
+        "formattedTotalResults": "531,000", 
+        "searchTime": 0.564158, 
+        "totalResults": "531000"
+    }, 
+    "url": {
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json", 
+        "type": "application/json"
+    }
+}

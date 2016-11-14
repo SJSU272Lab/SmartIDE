@@ -1,5 +1,2 @@
 Flask
-Jinja2
-Werkzeug
-distribute
-wsgiref
+google-api-python-client
