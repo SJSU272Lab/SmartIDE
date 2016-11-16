@@ -1,0 +1,850 @@
+<record>
+  <date>2016-11-15T23:14:45</date>
+  <millis>1479280485579</millis>
+  <sequence>49</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>CPU INFO</message>
+  <param>4</param>
+</record>
+<record>
+  <date>2016-11-15T23:14:45</date>
+  <millis>1479280485589</millis>
+  <sequence>50</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>SCREEN SIZE</message>
+  <param>1920</param>
+  <param>1080</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:14:45</date>
+  <millis>1479280485590</millis>
+  <sequence>51</sequence>
+  <level>700</level>
+  <thread>15</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2016-11-15T23:14:49</date>
+  <millis>1479280489547</millis>
+  <sequence>73</sequence>
+  <logger>org.netbeans.ui.metrics.laf</logger>
+  <level>800</level>
+  <thread>15</thread>
+  <message>USG_LOOK_AND_FEEL</message>
+  <param>Windows</param>
+  <param>Windows</param>
+</record>
+<record>
+  <date>2016-11-15T23:14:57</date>
+  <millis>1479280497862</millis>
+  <sequence>75</sequence>
+  <logger>org.netbeans.ui.actions</logger>
+  <level>400</level>
+  <thread>21</thread>
+  <message>UI_ACTION_BUTTON_PRESS</message>
+  <key>UI_ACTION_BUTTON_PRESS</key>
+  <catalog>org.openide.awt.Bundle</catalog>
+  <param>org.openide.awt.Toolbar$DefaultIconButton[]</param>
+  <param>org.openide.awt.Toolbar$DefaultIconButton</param>
+  <param>org.netbeans.modules.project.ui.actions.OpenProject[Open Proj&amp;ect...]</param>
+  <param>org.netbeans.modules.project.ui.actions.OpenProject</param>
+  <param>Open Proj&amp;ect...</param>
+</record>
+<record>
+  <date>2016-11-15T23:14:57</date>
+  <millis>1479280497992</millis>
+  <sequence>78</sequence>
+  <level>800</level>
+  <thread>28</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>4175093760</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:10</date>
+  <millis>1479280510493</millis>
+  <sequence>84</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>700</level>
+  <thread>34</thread>
+  <message>UI_OPEN_PROJECTS</message>
+  <key>UI_OPEN_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:10</date>
+  <millis>1479280510494</millis>
+  <sequence>85</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>800</level>
+  <thread>34</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:10</date>
+  <millis>1479280510962</millis>
+  <sequence>87</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>31</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>0</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:37</date>
+  <millis>1479280537260</millis>
+  <sequence>261</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>21</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$SelectWordAction[select-word]</param>
+  <param>org.netbeans.editor.BaseKit$SelectWordAction@66adb9eb</param>
+  <param>select-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:37</date>
+  <millis>1479280537263</millis>
+  <sequence>262</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>21</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$BeginWordAction[caret-begin-word]</param>
+  <param>org.netbeans.editor.BaseKit$BeginWordAction@17b0148</param>
+  <param>caret-begin-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:37</date>
+  <millis>1479280537265</millis>
+  <sequence>263</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>21</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$EndWordAction[selection-end-word]</param>
+  <param>org.netbeans.editor.BaseKit$EndWordAction@68537cd0</param>
+  <param>selection-end-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:15:37</date>
+  <millis>1479280537698</millis>
+  <sequence>308</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>31</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>26696</param>
+  <param>java</param>
+  <param>81</param>
+  <param>18289</param>
+  <param>SpringBinary</param>
+  <param>78</param>
+  <param>28</param>
+  <param>TaskListIndexer</param>
+  <param>3</param>
+  <param>1</param>
+  <param>org.netbeans.modules.java.source.indexing.COSSynchronizingIndexer</param>
+  <param>3</param>
+  <param>17</param>
+  <param>CopyResourcesIndexer</param>
+  <param>3</param>
+  <param>0</param>
+  <param>org-netbeans-modules-jumpto-file-FileIndexer</param>
+  <param>3</param>
+  <param>7</param>
+</record>
+<record>
+  <date>2016-11-15T23:16:04</date>
+  <millis>1479280564217</millis>
+  <sequence>311</sequence>
+  <logger>org.netbeans.ui.performance</logger>
+  <level>700</level>
+  <thread>79</thread>
+  <message>Snapshot statistics</message>
+  <param>1479280557139</param>
+  <param>Samples</param>
+  <param>691</param>
+  <param>Average</param>
+  <param>10.22498744138929</param>
+  <param>Minimum</param>
+  <param>2.604301</param>
+  <param>Maximum</param>
+  <param>18.136885</param>
+  <param>Std. deviation</param>
+  <param>1.0034573738128132</param>
+</record>
+<record>
+  <date>2016-11-15T23:16:31</date>
+  <millis>1479280591366</millis>
+  <sequence>327</sequence>
+  <logger>org.netbeans.ui.metrics.editor</logger>
+  <level>800</level>
+  <thread>31</thread>
+  <message>USG_EDITOR_MIME_TYPE</message>
+  <param>text/x-java</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:16:31</date>
+  <millis>1479280591447</millis>
+  <sequence>328</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>22</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>53749</param>
+</record>
+<record>
+  <date>2016-11-15T23:16:31</date>
+  <millis>1479280591550</millis>
+  <sequence>329</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>21</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2016-11-15T23:16:31</date>
+  <millis>1479280591579</millis>
+  <sequence>333</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>22</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>98</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:37</date>
+  <millis>1479280657816</millis>
+  <sequence>49</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>CPU INFO</message>
+  <param>4</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:37</date>
+  <millis>1479280657825</millis>
+  <sequence>50</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>SCREEN SIZE</message>
+  <param>1920</param>
+  <param>1080</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:37</date>
+  <millis>1479280657825</millis>
+  <sequence>51</sequence>
+  <level>700</level>
+  <thread>15</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2016-11-15T23:17:41</date>
+  <millis>1479280661272</millis>
+  <sequence>73</sequence>
+  <logger>org.netbeans.ui.metrics.laf</logger>
+  <level>800</level>
+  <thread>15</thread>
+  <message>USG_LOOK_AND_FEEL</message>
+  <param>Windows</param>
+  <param>Windows</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:49</date>
+  <millis>1479280669724</millis>
+  <sequence>77</sequence>
+  <level>800</level>
+  <thread>31</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>4175093760</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:52</date>
+  <millis>1479280672697</millis>
+  <sequence>78</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>700</level>
+  <thread>22</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:52</date>
+  <millis>1479280672699</millis>
+  <sequence>79</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>800</level>
+  <thread>22</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:53</date>
+  <millis>1479280673133</millis>
+  <sequence>80</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>14</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>0</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:57</date>
+  <millis>1479280677881</millis>
+  <sequence>94</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$SelectWordAction[select-word]</param>
+  <param>org.netbeans.editor.BaseKit$SelectWordAction@19e28386</param>
+  <param>select-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:57</date>
+  <millis>1479280677882</millis>
+  <sequence>95</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$BeginWordAction[caret-begin-word]</param>
+  <param>org.netbeans.editor.BaseKit$BeginWordAction@31f047b5</param>
+  <param>caret-begin-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:17:57</date>
+  <millis>1479280677885</millis>
+  <sequence>96</sequence>
+  <logger>org.netbeans.ui.actions.editor</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>UI_ACTION_EDITOR</message>
+  <key>UI_ACTION_EDITOR</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>no-ActionEvent</param>
+  <param>no-ActionEvent</param>
+  <param>org.netbeans.editor.BaseKit$EndWordAction[selection-end-word]</param>
+  <param>org.netbeans.editor.BaseKit$EndWordAction@5e36a8e7</param>
+  <param>selection-end-word</param>
+</record>
+<record>
+  <date>2016-11-15T23:18:02</date>
+  <millis>1479280682445</millis>
+  <sequence>107</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>14</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>9310</param>
+  <param>java</param>
+  <param>81</param>
+  <param>1175</param>
+  <param>SpringBinary</param>
+  <param>78</param>
+  <param>13</param>
+  <param>TaskListIndexer</param>
+  <param>3</param>
+  <param>2</param>
+  <param>org.netbeans.modules.java.source.indexing.COSSynchronizingIndexer</param>
+  <param>3</param>
+  <param>14</param>
+  <param>CopyResourcesIndexer</param>
+  <param>3</param>
+  <param>0</param>
+  <param>org-netbeans-modules-jumpto-file-FileIndexer</param>
+  <param>3</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:18:16</date>
+  <millis>1479280696964</millis>
+  <sequence>109</sequence>
+  <logger>org.netbeans.ui.performance</logger>
+  <level>700</level>
+  <thread>55</thread>
+  <message>Snapshot statistics</message>
+  <param>1479280685569</param>
+  <param>Samples</param>
+  <param>1122</param>
+  <param>Average</param>
+  <param>10.137853216577547</param>
+  <param>Minimum</param>
+  <param>1.888012</param>
+  <param>Maximum</param>
+  <param>46.440382</param>
+  <param>Std. deviation</param>
+  <param>1.3636492666018376</param>
+</record>
+<record>
+  <date>2016-11-15T23:18:37</date>
+  <millis>1479280717645</millis>
+  <sequence>142</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2016-11-15T23:20:04</date>
+  <millis>1479280804698</millis>
+  <sequence>143</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>70</thread>
+  <message>LOG_WINDOW_ACTIVATED</message>
+  <key>LOG_WINDOW_ACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+  <param>61</param>
+</record>
+<record>
+  <date>2016-11-15T23:20:09</date>
+  <millis>1479280809456</millis>
+  <sequence>145</sequence>
+  <logger>org.netbeans.ui.performance</logger>
+  <level>700</level>
+  <thread>70</thread>
+  <message>Snapshot statistics</message>
+  <param>1479280806109</param>
+  <param>Samples</param>
+  <param>224</param>
+  <param>Average</param>
+  <param>14.862117955357151</param>
+  <param>Minimum</param>
+  <param>1.707549</param>
+  <param>Maximum</param>
+  <param>982.061966</param>
+  <param>Std. deviation</param>
+  <param>64.9775564158029</param>
+</record>
+<record>
+  <date>2016-11-15T23:20:45</date>
+  <millis>1479280845064</millis>
+  <sequence>147</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>84</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>162619</param>
+</record>
+<record>
+  <date>2016-11-15T23:20:45</date>
+  <millis>1479280845127</millis>
+  <sequence>148</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>84</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>43</param>
+</record>
+<record>
+  <date>2016-11-15T23:20:45</date>
+  <millis>1479280845782</millis>
+  <sequence>149</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2016-11-15T23:22:11</date>
+  <millis>1479280931743</millis>
+  <sequence>49</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>CPU INFO</message>
+  <param>4</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:11</date>
+  <millis>1479280931753</millis>
+  <sequence>50</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>SCREEN SIZE</message>
+  <param>1920</param>
+  <param>1080</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:11</date>
+  <millis>1479280931754</millis>
+  <sequence>51</sequence>
+  <level>700</level>
+  <thread>15</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2016-11-15T23:22:16</date>
+  <millis>1479280936319</millis>
+  <sequence>73</sequence>
+  <logger>org.netbeans.ui.metrics.laf</logger>
+  <level>800</level>
+  <thread>15</thread>
+  <message>USG_LOOK_AND_FEEL</message>
+  <param>Windows</param>
+  <param>Windows</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:25</date>
+  <millis>1479280945759</millis>
+  <sequence>77</sequence>
+  <level>800</level>
+  <thread>32</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>4175093760</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:29</date>
+  <millis>1479280949652</millis>
+  <sequence>80</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>700</level>
+  <thread>33</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:29</date>
+  <millis>1479280949653</millis>
+  <sequence>81</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>800</level>
+  <thread>33</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:29</date>
+  <millis>1479280949894</millis>
+  <sequence>82</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>35</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>0</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:34</date>
+  <millis>1479280954193</millis>
+  <sequence>96</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>35</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>4296</param>
+  <param>java</param>
+  <param>81</param>
+  <param>3313</param>
+  <param>SpringBinary</param>
+  <param>78</param>
+  <param>75</param>
+  <param>TaskListIndexer</param>
+  <param>3</param>
+  <param>2</param>
+  <param>org.netbeans.modules.java.source.indexing.COSSynchronizingIndexer</param>
+  <param>3</param>
+  <param>14</param>
+  <param>CopyResourcesIndexer</param>
+  <param>3</param>
+  <param>0</param>
+  <param>org-netbeans-modules-jumpto-file-FileIndexer</param>
+  <param>3</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:22:48</date>
+  <millis>1479280968706</millis>
+  <sequence>98</sequence>
+  <logger>org.netbeans.ui.performance</logger>
+  <level>700</level>
+  <thread>33</thread>
+  <message>Snapshot statistics</message>
+  <param>1479280964210</param>
+  <param>Samples</param>
+  <param>398</param>
+  <param>Average</param>
+  <param>11.059467211055278</param>
+  <param>Minimum</param>
+  <param>1.474488</param>
+  <param>Maximum</param>
+  <param>105.020485</param>
+  <param>Std. deviation</param>
+  <param>6.692270344394589</param>
+</record>
+<record>
+  <date>2016-11-15T23:23:18</date>
+  <millis>1479280998370</millis>
+  <sequence>147</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>37</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>
+<record>
+  <date>2016-11-15T23:23:18</date>
+  <millis>1479280998403</millis>
+  <sequence>151</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>59</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>44210</param>
+</record>
+<record>
+  <date>2016-11-15T23:23:18</date>
+  <millis>1479280998462</millis>
+  <sequence>152</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>59</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>27</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:18</date>
+  <millis>1479281058690</millis>
+  <sequence>49</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>CPU INFO</message>
+  <param>4</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:18</date>
+  <millis>1479281058699</millis>
+  <sequence>50</sequence>
+  <level>300</level>
+  <thread>15</thread>
+  <message>SCREEN SIZE</message>
+  <param>1920</param>
+  <param>1080</param>
+  <param>2</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:18</date>
+  <millis>1479281058699</millis>
+  <sequence>51</sequence>
+  <level>700</level>
+  <thread>15</thread>
+  <message>IDE_STARTUP</message>
+</record>
+<record>
+  <date>2016-11-15T23:24:22</date>
+  <millis>1479281062600</millis>
+  <sequence>73</sequence>
+  <logger>org.netbeans.ui.metrics.laf</logger>
+  <level>800</level>
+  <thread>15</thread>
+  <message>USG_LOOK_AND_FEEL</message>
+  <param>Windows</param>
+  <param>Windows</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:31</date>
+  <millis>1479281071806</millis>
+  <sequence>77</sequence>
+  <level>800</level>
+  <thread>30</thread>
+  <message>MEMORY</message>
+  <key>MEMORY</key>
+  <catalog>&lt;null&gt;</catalog>
+  <param>4175093760</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:34</date>
+  <millis>1479281074771</millis>
+  <sequence>79</sequence>
+  <logger>org.netbeans.ui.projects</logger>
+  <level>700</level>
+  <thread>32</thread>
+  <message>UI_INIT_PROJECTS</message>
+  <key>UI_INIT_PROJECTS</key>
+  <catalog>org.netbeans.modules.project.ui.Bundle</catalog>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+  <param>NbModuleProject</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:34</date>
+  <millis>1479281074772</millis>
+  <sequence>80</sequence>
+  <logger>org.netbeans.ui.metrics.projects</logger>
+  <level>800</level>
+  <thread>32</thread>
+  <message>USG_PROJECT_OPEN</message>
+  <param>org.netbeans.modules.apisupport.project.NbModuleProject</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:35</date>
+  <millis>1479281075054</millis>
+  <sequence>81</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>36</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>0</param>
+</record>
+<record>
+  <date>2016-11-15T23:24:43</date>
+  <millis>1479281083879</millis>
+  <sequence>95</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>36</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>8801</param>
+  <param>java</param>
+  <param>81</param>
+  <param>842</param>
+  <param>SpringBinary</param>
+  <param>78</param>
+  <param>17</param>
+  <param>TaskListIndexer</param>
+  <param>3</param>
+  <param>1</param>
+  <param>org.netbeans.modules.java.source.indexing.COSSynchronizingIndexer</param>
+  <param>3</param>
+  <param>12</param>
+  <param>CopyResourcesIndexer</param>
+  <param>3</param>
+  <param>0</param>
+  <param>org-netbeans-modules-jumpto-file-FileIndexer</param>
+  <param>3</param>
+  <param>1</param>
+</record>
+<record>
+  <date>2016-11-15T23:25:52</date>
+  <millis>1479281152378</millis>
+  <sequence>97</sequence>
+  <logger>org.netbeans.ui.performance</logger>
+  <level>700</level>
+  <thread>53</thread>
+  <message>Snapshot statistics</message>
+  <param>1479281147258</param>
+  <param>Samples</param>
+  <param>500</param>
+  <param>Average</param>
+  <param>10.215127272</param>
+  <param>Minimum</param>
+  <param>2.535452</param>
+  <param>Maximum</param>
+  <param>36.316535</param>
+  <param>Std. deviation</param>
+  <param>1.8238383344720839</param>
+</record>
+<record>
+  <date>2016-11-15T23:26:27</date>
+  <millis>1479281187888</millis>
+  <sequence>159</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>89</thread>
+  <message>INDEXING_STARTED</message>
+  <key>INDEXING_STARTED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>104009</param>
+</record>
+<record>
+  <date>2016-11-15T23:26:27</date>
+  <millis>1479281187957</millis>
+  <sequence>160</sequence>
+  <logger>org.netbeans.ui.indexing</logger>
+  <level>800</level>
+  <thread>89</thread>
+  <message>INDEXING_FINISHED</message>
+  <key>INDEXING_FINISHED</key>
+  <catalog>org.netbeans.modules.parsing.impl.indexing.Bundle</catalog>
+  <param>51</param>
+</record>
+<record>
+  <date>2016-11-15T23:26:28</date>
+  <millis>1479281188122</millis>
+  <sequence>164</sequence>
+  <logger>org.netbeans.ui.focus</logger>
+  <level>500</level>
+  <thread>40</thread>
+  <message>LOG_WINDOW_DEACTIVATED</message>
+  <key>LOG_WINDOW_DEACTIVATED</key>
+  <catalog>org.netbeans.core.ui.warmup.Bundle</catalog>
+</record>

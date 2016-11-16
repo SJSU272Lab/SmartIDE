@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mode version="2.4">
+    <module name="org.netbeans.core.ui/1" spec="1.2" />
+    <name unique="rightSlidingSide"  />
+  <kind type="sliding" />
+  <slidingSide side="right" />
+  <slide-in-size tc-id="SmartFixTopComponent" size="350" />
+  <state type="joined"  />
+  <bounds x="1338" y="3" width="350" height="300" />
+  <frame state="0"/>
+    <empty-behavior permanent="true"/>
+</mode>
