@@ -1,4 +1,4 @@
-/**var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var recordSchema = new Schema({
@@ -6,4 +6,4 @@ var recordSchema = new Schema({
 	answer: {type: String, required: true}
 });
 
-module.exports = mongoose.model('Record', recordSchema);**/
+module.exports = mongoose.model('Record', recordSchema);

@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -14,8 +14,8 @@ var deleteRecord = require('./routes/deleteRecord');
 var retrieveRecord = require('./routes/retrieveRecord');
 
 var app = express();
-//mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://mongo:27017/record');
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://localhost:27017/record');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
