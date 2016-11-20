@@ -12,6 +12,7 @@ import javax.swing.JTextArea;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
+import org.openide.awt.HtmlBrowser;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 
@@ -102,11 +103,19 @@ public final class SmartFixTopComponent extends TopComponent {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        textArea.setText("Loading...");
         
         try
         {
-            URL url = new URL("http://www.gizmodo.com");
+            //Luckman
+            String controllerAPI = "http://localhost:1314/controller/";
+            String keyWord = textArea.getText();
+            keyWord = keyWord.replace(' ', '_');
+            URL url = new URL(controllerAPI+keyWord);
+            System.out.println(controllerAPI+keyWord);
+            textArea.setText("Loading...");
+            HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
+            
+            
             BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
             String message = "";
             String text = "";
