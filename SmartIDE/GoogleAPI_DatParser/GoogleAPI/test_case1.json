@@ -1,0 +1,470 @@
+{
+    "kind": "customsearch#search", 
+    "url": {
+        "type": "application/json", 
+        "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+    }, 
+    "items": [
+        {
+            "kind": "customsearch#result", 
+            "title": "algorithm - What is a good Hash Function? - Stack Overflow", 
+            "displayLink": "stackoverflow.com", 
+            "htmlTitle": "algorithm - What is a good <b>Hash Function</b>? - Stack Overflow", 
+            "formattedUrl": "stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/34595/what-is-a-good-<b>hash</b>-<b>function</b>", 
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:url": "http://stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+                        "twitter:app:country": "US", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:description": "What is a good Hash function? I saw a lot of hash function and applications in my data structures courses in college, but I mostly got that it's pretty hard to make a good hash function. As a rule of", 
+                        "og:type": "website", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+                        "twitter:card": "summary", 
+                        "twitter:title": "What is a good Hash Function?", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "twitter:app:id:iphone": "871299723"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "7", 
+                        "text": "What is a good Hash function? I saw a lot of hash function and applications in my data structures courses in college, but I mostly got that it's pretty hard to make a good hash function. As...", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "What is a good Hash Function?", 
+                        "upvotecount": "85"
+                    }
+                ], 
+                "answer": [
+                    {
+                        "text": "For doing \"normal\" hash table lookups on basically any kind of data - this one by Paul Hsieh is the best I've ever used. http://www.azillionmonkeys.com/qed/hash.html If you care about cryptographic...", 
+                        "upvotecount": "18"
+                    }, 
+                    {
+                        "text": "There's no such thing as a \u201cgood hash function\u201d for universal hashes (ed. yes, I know there's such a thing as \u201cuniversal hashing\u201d but that's not what I meant). Depending on the context...", 
+                        "upvotecount": "43"
+                    }, 
+                    {
+                        "text": "There are two major purposes of hashing functions: to disperse data points uniformly into n bits. to securely identify the input data. It's impossible to recommend a hash without knowing what...", 
+                        "upvotecount": "8"
+                    }, 
+                    {
+                        "text": "This is an example of a good one and also an example of why you would never want to write one. It is a Fowler / Noll / Vo (FNV) Hash which is equal parts computer science genius and pure voodoo:...", 
+                        "upvotecount": "4"
+                    }, 
+                    {
+                        "text": "I'd say that the main rule of thumb is not to roll your own. Try to use something that has been thoroughly tested, e.g., SHA-1 or something along those lines.", 
+                        "upvotecount": "2"
+                    }, 
+                    {
+                        "text": "A good hash function has the following properties: Given a hash of a message it is computationally infeasible for an attacker to find another message such that their hashes are identical. Given...", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": "What you're saying here is you want to have one that uses has collision resistance. Try using SHA-2. Or try using a (good) block cipher in a one way compression function (never tried that before),...", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "description": "What is a good Hash function? I saw a lot of hash function and applications in my data structures courses in college, but I mostly got that it's pretty hard to make a good hash function. As a rule of", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "What is a good Hash Function?", 
+                        "title": "What is a good Hash Function?"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "width": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "height": "225"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ]
+            }, 
+            "snippet": "What is a good Hash function? I saw a lot of hash function and ... For doing \"\nnormal\" hash table lookups on basically any kind of data - this one by\u00a0...", 
+            "htmlSnippet": "What is a good <b>Hash function</b>? I saw a lot of <b>hash function</b> and ... For doing &quot;<br>\nnormal&quot; hash table lookups on basically any kind of data - this one by&nbsp;...", 
+            "link": "http://stackoverflow.com/questions/34595/what-is-a-good-hash-function", 
+            "cacheId": "O3HAGL1yoiUJ"
+        }, 
+        {
+            "kind": "customsearch#result", 
+            "title": "Understanding strange Java hash function - Stack Overflow", 
+            "displayLink": "stackoverflow.com", 
+            "htmlTitle": "Understanding strange Java <b>hash function</b> - Stack Overflow", 
+            "formattedUrl": "stackoverflow.com/.../understanding-strange-java-hash-function", 
+            "htmlFormattedUrl": "stackoverflow.com/.../understanding-strange-java-<b>hash</b>-<b>function</b>", 
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:url": "http://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function", 
+                        "twitter:app:country": "US", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:description": "Following is the source code for a hash function in java.util.HashMap. The comments explain well enough what it's accomplishing. but how? What are the ^ and &gt;&gt;&gt; operators doing? Can someone", 
+                        "og:type": "website", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function", 
+                        "twitter:card": "summary", 
+                        "twitter:title": "Understanding strange Java hash function", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "twitter:app:id:iphone": "871299723"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "6", 
+                        "text": "Following is the source code for a hash function in java.util.HashMap. The comments explain well enough what it's accomplishing. but how? What are the ^ and >>> operators doing? Can someone...", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "Understanding strange Java hash function", 
+                        "upvotecount": "27"
+                    }
+                ], 
+                "answer": [
+                    {
+                        "text": "Dunno' about English, but here is some code and the sample output: public static void main ( String[] args ) { int h = 0xffffffff; int h1 = h >>> 20; int h2 = h >>> 12; int h3 = h1 ^ h2; int...", 
+                        "upvotecount": "42"
+                    }, 
+                    {
+                        "text": ">>> is a bitshift with zero fill. ^ is an XOR. XOR is also called exclusive or--it is a math operator that combines two numbers. See http://en.wikipedia.org/wiki/Exclusive_or A right bitshift...", 
+                        "upvotecount": "4"
+                    }, 
+                    {
+                        "text": "Here's an article that discusses integer hash functions and some of the considerations to which they are designed. It's not very detailed, but the main point is this: the operations must use...", 
+                        "upvotecount": "4"
+                    }, 
+                    {
+                        "text": "^ is bitwise XOR, >>> is bit shift.", 
+                        "upvotecount": "1"
+                    }, 
+                    {
+                        "text": ">>> appears to be an unsigned right bitwise shift, and ^ is bitwise XOR http://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html", 
+                        "upvotecount": "0"
+                    }, 
+                    {
+                        "text": "It is a combination of bitwise exclusive OR and unsigned right shift. See here for more explanation: http://www.roseindia.net/java/master-java/bitwise-bitshift-operators.shtml", 
+                        "upvotecount": "-1"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "description": "Following is the source code for a hash function in java.util.HashMap. The comments explain well enough what it's accomplishing. but how? What are the ^ and >>> operators doing? Can someone", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "Understanding strange Java hash function", 
+                        "title": "Understanding strange Java hash function"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "width": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "height": "225"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ]
+            }, 
+            "snippet": "Following is the source code for a hash function in java.util.HashMap . ... Dunno' \nabout English, but here is some code and the sample output:", 
+            "htmlSnippet": "Following is the source code for a <b>hash function</b> in java.util.HashMap . ... Dunno&#39; <br>\nabout English, but here is some code and the sample output:", 
+            "link": "http://stackoverflow.com/questions/9335169/understanding-strange-java-hash-function", 
+            "cacheId": "pzTzOLsOVGoJ"
+        }, 
+        {
+            "kind": "customsearch#result", 
+            "title": "c - hash function for string - Stack Overflow", 
+            "displayLink": "stackoverflow.com", 
+            "htmlTitle": "c - <b>hash function</b> for string - Stack Overflow", 
+            "formattedUrl": "stackoverflow.com/questions/7666509/hash-function-for-string", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/7666509/<b>hash</b>-<b>function</b>-for-string", 
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:url": "http://stackoverflow.com/questions/7666509/hash-function-for-string", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/7666509/hash-function-for-string", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/7666509/hash-function-for-string", 
+                        "twitter:app:country": "US", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:description": "I'm working on hash table in C language and I'm testing hash function for string.  The first function I've tried is to add ascii code and use modulo (%100) but i've got poor results with the first ...", 
+                        "og:type": "website", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/7666509/hash-function-for-string", 
+                        "twitter:card": "summary", 
+                        "twitter:title": "hash function for string", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "twitter:app:id:iphone": "871299723"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "6", 
+                        "text": "I'm working on hash table in C language and I'm testing hash function for string. The first function I've tried is to add ascii code and use modulo (%100) but i've got poor results with the...", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "hash function for string", 
+                        "upvotecount": "52"
+                    }
+                ], 
+                "answer": [
+                    {
+                        "text": "I've had nice results with djb2 by Dan Bernstein. unsigned long hash(unsigned char *str) { unsigned long hash = 5381; int c; while (c = *str++) hash = ((hash << 5) + hash) + c; /* hash * 33...", 
+                        "upvotecount": "77"
+                    }, 
+                    {
+                        "text": "First, you generally do not want to use a cryptographic hash for a hash table. An algorithm that's very fast by cryptographic standards is still excruciatingly slow by hash table standards....", 
+                        "upvotecount": "14"
+                    }, 
+                    {
+                        "text": "Wikipedia shows a nice string hash function called Jenkins One At A Time Hash. It also quotes improved versions of this hash. uint32_t jenkins_one_at_a_time_hash(char *key, size_t len) { uint32_t...", 
+                        "upvotecount": "7"
+                    }, 
+                    {
+                        "text": "There are a number of existing hashtable implementations for C, from the C standard library hcreate/hdestroy/hsearch, to those in the APR and glib, which also provide prebuilt hash functions....", 
+                        "upvotecount": "5"
+                    }, 
+                    {
+                        "text": "First, is 40 collisions for 130 words hashed to 0..99 bad? You can't expect perfect hashing if you are not taking steps specifically for it to happen. An ordinary hash function won't have fewer...", 
+                        "upvotecount": "2"
+                    }, 
+                    {
+                        "text": "One thing I've used with good results is the following (I don't know if its mentioned already because I can't remember its name). You precompute a table T with a random number for each character...", 
+                        "upvotecount": "0"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "description": "I'm working on hash table in C language and I'm testing hash function for string. The first function I've tried is to add ascii code and use modulo (%100) but i've got poor results with the first ...", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "hash function for string", 
+                        "title": "hash function for string"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "width": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "height": "225"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ]
+            }, 
+            "snippet": "I'm working on hash table in C language and I'm testing hash function ... I've had \nnice results with djb2 by Dan Bernstein. unsigned long\u00a0...", 
+            "htmlSnippet": "I&#39;m working on hash table in C language and I&#39;m testing <b>hash function</b> ... I&#39;ve had <br>\nnice results with djb2 by Dan Bernstein. unsigned long&nbsp;...", 
+            "link": "http://stackoverflow.com/questions/7666509/hash-function-for-string", 
+            "cacheId": "ylPHU01awVUJ"
+        }, 
+        {
+            "kind": "customsearch#result", 
+            "title": "Newest 'hash-function' Questions - Stack Overflow", 
+            "displayLink": "stackoverflow.com", 
+            "htmlTitle": "Newest &#39;<b>hash</b>-<b>function</b>&#39; Questions - Stack Overflow", 
+            "formattedUrl": "stackoverflow.com/questions/tagged/hash-function", 
+            "htmlFormattedUrl": "stackoverflow.com/questions/tagged/<b>hash</b>-<b>function</b>", 
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:url": "http://stackoverflow.com/questions/tagged/hash-function", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:description": "Q&A for professional and enthusiast programmers", 
+                        "og:type": "website", 
+                        "twitter:card": "summary", 
+                        "twitter:title": "Newest 'hash-function' Questions", 
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "description": "Q&A for professional and enthusiast programmers", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "Newest 'hash-function' Questions", 
+                        "title": "Newest 'hash-function' Questions"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "width": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "height": "225"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ]
+            }, 
+            "snippet": "I'm very new to C# and hash functions. I'm trying to get my application to run \nthrough a huge number of different strings and I'm aiming to find a collision with \nthe\u00a0...", 
+            "htmlSnippet": "I&#39;m very new to C# and <b>hash functions</b>. I&#39;m trying to get my application to run <br>\nthrough a huge number of different strings and I&#39;m aiming to find a collision with <br>\nthe&nbsp;...", 
+            "link": "http://stackoverflow.com/questions/tagged/hash-function", 
+            "cacheId": "M-80Nx5qHuEJ"
+        }, 
+        {
+            "kind": "customsearch#result", 
+            "title": "c - What integer hash function are good that accepts an integer hash ...", 
+            "displayLink": "stackoverflow.com", 
+            "htmlTitle": "c - What integer <b>hash function</b> are good that accepts an integer hash ...", 
+            "formattedUrl": "stackoverflow.com/.../what-integer-hash-function-are-good-that-accepts-an- integer-hash-key", 
+            "htmlFormattedUrl": "stackoverflow.com/.../what-integer-<b>hash</b>-<b>function</b>-are-good-that-accepts-an- integer-<b>hash</b>-key", 
+            "pagemap": {
+                "metatags": [
+                    {
+                        "og:url": "http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key", 
+                        "twitter:app:url:iphone": "se-zaphod://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key", 
+                        "twitter:app:url:ipad": "se-zaphod://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key", 
+                        "twitter:app:country": "US", 
+                        "twitter:domain": "stackoverflow.com", 
+                        "twitter:description": "What integer hash function are good that accepts an integer hash key?", 
+                        "og:type": "website", 
+                        "twitter:app:name:iphone": "Stack Exchange iOS", 
+                        "twitter:app:name:ipad": "Stack Exchange iOS", 
+                        "twitter:app:id:ipad": "871299723", 
+                        "twitter:app:name:googleplay": "Stack Exchange Android", 
+                        "twitter:app:url:googleplay": "http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key", 
+                        "twitter:card": "summary", 
+                        "twitter:title": "What integer hash function are good that accepts an integer hash key?", 
+                        "twitter:app:id:googleplay": "com.stackexchange.marvin", 
+                        "og:image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "twitter:app:id:iphone": "871299723"
+                    }
+                ], 
+                "question": [
+                    {
+                        "answercount": "8", 
+                        "text": "What integer hash function are good that accepts an integer hash key?", 
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a", 
+                        "name": "What integer hash function are good that accepts an integer hash key?", 
+                        "upvotecount": "57"
+                    }
+                ], 
+                "answer": [
+                    {
+                        "text": "Knuth's multiplicative method: hash(i)=i*2654435761 mod 2^32 In general, you should pick a multiplier that is in the order of your hash size (2^32 in the example) and has no common factors...", 
+                        "upvotecount": "25"
+                    }, 
+                    {
+                        "text": "I found the following algorithm provides a very good statistical distribution. Each input bit affects each output bit with about 50% probability. There are no collisions (each input results...", 
+                        "upvotecount": "55"
+                    }, 
+                    {
+                        "text": "Depends on how your data is distributed. For a simple counter, the simplest function f(i) = i will be good (I suspect optimal, but I can't prove it).", 
+                        "upvotecount": "20"
+                    }, 
+                    {
+                        "text": "This page lists some simple hash functions that tend to decently in general, but any simple hash has pathological cases where it doesn't work well.", 
+                        "upvotecount": "6"
+                    }, 
+                    {
+                        "text": "32-bits multiplicative method (very fast) see @rafal #define hash32(x) ((x)*2654435761) #define H_BITS 24 // Hashtable size #define H_SHIFT (32-H_BITS) unsigned hashtab[1<<H_BITS] .... unsigned...", 
+                        "upvotecount": "5"
+                    }, 
+                    {
+                        "text": "There's a nice overview over some hash algorithms at Eternally Confuzzled. I'd recommend Bob Jenkins' one-at-a-time hash which quickly reaches avalanche and therefore can be used for efficient...", 
+                        "upvotecount": "3"
+                    }, 
+                    {
+                        "text": "The answer depends on a lot of things like: Where do you intend to employ it? What are you trying to do with the hash? Do you need a crytographically secure hash function? I suggest that you...", 
+                        "upvotecount": "2"
+                    }, 
+                    {
+                        "text": "I don't think we can say that a hash function is \"good\" without knowing your data in advance ! and without knowing what you're going to do with it. There are better data structures than hash...", 
+                        "upvotecount": "1"
+                    }
+                ], 
+                "qapage": [
+                    {
+                        "image": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "description": "What integer hash function are good that accepts an integer hash key?", 
+                        "primaryimageofpage": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a", 
+                        "name": "What integer hash function are good that accepts an integer hash key?", 
+                        "title": "What integer hash function are good that accepts an integer hash key?"
+                    }
+                ], 
+                "cse_thumbnail": [
+                    {
+                        "width": "225", 
+                        "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQrqiMqeE25uz0622Vj9Cvxf2QlczrckZNpgcCthUPsXMgvzR_AktvSQoMz", 
+                        "height": "225"
+                    }
+                ], 
+                "cse_image": [
+                    {
+                        "src": "http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a"
+                    }
+                ]
+            }, 
+            "snippet": "What integer hash function are good that accepts an integer hash key\u00a0...", 
+            "htmlSnippet": "What integer <b>hash function</b> are good that accepts an integer hash key&nbsp;...", 
+            "link": "http://stackoverflow.com/questions/664014/what-integer-hash-function-are-good-that-accepts-an-integer-hash-key", 
+            "cacheId": "st74rIa0YfAJ"
+        }
+    ], 
+    "context": {
+        "title": "Stackoverflow"
+    }, 
+    "queries": {
+        "request": [
+            {
+                "count": 5, 
+                "outputEncoding": "utf8", 
+                "language": "lang_en", 
+                "title": "Google Custom Search - hash function", 
+                "safe": "off", 
+                "searchTerms": "hash function", 
+                "startIndex": 1, 
+                "cx": "011247095799164362687:htc6tt21zii", 
+                "inputEncoding": "utf8", 
+                "totalResults": "1650000"
+            }
+        ], 
+        "nextPage": [
+            {
+                "count": 5, 
+                "outputEncoding": "utf8", 
+                "language": "lang_en", 
+                "title": "Google Custom Search - hash function", 
+                "safe": "off", 
+                "searchTerms": "hash function", 
+                "startIndex": 6, 
+                "cx": "011247095799164362687:htc6tt21zii", 
+                "inputEncoding": "utf8", 
+                "totalResults": "1650000"
+            }
+        ]
+    }, 
+    "searchInformation": {
+        "formattedSearchTime": "0.28", 
+        "formattedTotalResults": "1,650,000", 
+        "totalResults": "1650000", 
+        "searchTime": 0.277911
+    }
+}

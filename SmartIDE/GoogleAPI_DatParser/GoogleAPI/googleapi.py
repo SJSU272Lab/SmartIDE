@@ -8,10 +8,20 @@ from googleresult import *
 
 app = Flask(__name__)
 
-@app.route('/<keyword>', methods = ['GET'])
-def api_search(keyword):
+@app.route('/search', methods = ['GET', 'POST'])
+def api_search():
+    if request.method == 'POST':
+        keyword = request.json.get("question")
+        print keyword
+    elif request.method == 'GET':
+        keyword = request.args.get('question')
+
+    if keyword == "None" or keyword == None:
+        return "Keyword Missing"
+    
     result = searchfor(keyword)
     clean = cleanresult(result)
+    clean["question"] = keyword
     return jsonify(**clean)
 
 def searchfor(keyword):
@@ -23,28 +33,28 @@ def searchfor(keyword):
         num = '5',
         cx = '011247095799164362687:htc6tt21zii',
         ).execute()
+    # print json.dumps(res, indent=4)
     return res
 
 def cleanresult(result):
     clean = {"result": []}
-    # print is_json(result)
     for item in result.get("items"):
-        link = item.get("link")
-        # print link
-        if(item.get("pagemap").get("qapage") != None):
+        ggresult = None
+        if(item.get("pagemap").get("qapage") != None and item.get("pagemap").get("answer") != None):
+            link = item.get("link")
+            # print link
             question = item.get("pagemap").get("qapage")[0].get("name")
-        else:
-            question = "no question"
-        ggresult = googleresult(question, link)
-        clean["result"].append(ggresult.get_dict())
+            ggresult = googleresult(question, link)
+        if ggresult != None:
+            clean["result"].append(ggresult.get_dict())
     return clean
 
-def is_json(myjson):
-    try:
-        json_object = json.loads(myjson)
-    except ValueError, e:
-        return False
-    return True
+# def is_json(myjson):
+#     try:
+#         json_object = json.loads(myjson)
+#     except ValueError, e:
+#         return False
+#     return True
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
