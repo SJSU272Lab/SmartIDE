@@ -3,9 +3,9 @@
 <windowmanager version="2.1">
     <main-window>
   <joined-properties
-   x="-6"
+   x="0"
    y="65"
-   width="1314"
+   width="1318"
    height="747"
    relative-x="0.0"
    relative-y="0.0"
