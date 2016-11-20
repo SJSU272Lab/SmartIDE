@@ -5,9 +5,9 @@
     <name unique="rightSlidingSide"  />
   <kind type="sliding" />
   <slidingSide side="right" />
-  <slide-in-size tc-id="SmartFixTopComponent" size="350" />
+  <slide-in-size tc-id="SmartFixTopComponent" size="543" />
   <state type="joined"  />
-  <bounds x="1338" y="3" width="350" height="300" />
+  <bounds x="728" y="3" width="543" height="278" />
   <frame state="0"/>
     <empty-behavior permanent="true"/>
 </mode>

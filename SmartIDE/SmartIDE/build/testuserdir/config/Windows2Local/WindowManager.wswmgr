@@ -3,10 +3,10 @@
 <windowmanager version="2.1">
     <main-window>
   <joined-properties
-   x="2040"
-   y="59"
-   width="1728"
-   height="945"
+   x="-6"
+   y="65"
+   width="1314"
+   height="747"
    relative-x="0.0"
    relative-y="0.0"
    relative-width="0.0"
@@ -18,10 +18,10 @@
    frame-state="0"
 />
   <separated-properties
-   x="192"
-   y="105"
-   width="1536"
-   height="84"
+   x="144"
+   y="83"
+   width="1152"
+   height="66"
    relative-x="0.0"
    relative-y="0.0"
    relative-width="0.0"
@@ -33,23 +33,22 @@
   </main-window>
     <editor-area state="joined" frame-state="0">
   <constraints>
-  <path orientation="horizontal" number="60" weight="0.7" />
+  <path orientation="horizontal" number="60" weight="0.8" />
   <path orientation="vertical" number="40" weight="0.7" />
   <path orientation="horizontal" number="40" weight="0.7" />
   <path orientation="vertical" number="40" weight="0.5" />
   </constraints>
-  <bounds x="633" y="252" width="806" height="462" />
+  <bounds x="475" y="199" width="604" height="365" />
     </editor-area>
-    <screen width="1920" height="1080"/>
+    <screen width="1440" height="900"/>
     <active-mode name="editor"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
     <tc-list>
   <tc-id id="SmartFixTopComponent"/>
   <tc-id id="MultiView-java#002Eso2D0988CFtext#002Ehistory#007C"/>
-  <tc-id id="Welcome"/>
   <tc-id id="navigatorTC"/>
+  <tc-id id="Welcome"/>
   <tc-id id="projectTabLogical_tc"/>
-  <tc-id id="MultiView-java#007Cja5C79D3CFtext#002Ehistory#007C"/>
   <tc-id id="projectTab_tc"/>
   <tc-id id="services"/>
     </tc-list>

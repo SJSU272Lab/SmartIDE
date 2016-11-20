@@ -4,8 +4,11 @@
     <name unique="editor"  />
   <kind type="editor" />
   <state type="joined"  />
+  <constraints>
+    <path orientation="vertical" number="2" weight="0.5"/>
+  </constraints>
   <bounds x="0" y="0" width="0" height="0" />
   <frame state="0"/>
-    <active-tc  id="Welcome" />
+    <active-tc  id="Welcome"  prev-id="MultiView-java#002Eso2D0988CFtext#002Ehistory#007C" />
     <empty-behavior permanent="true"/>
 </mode>

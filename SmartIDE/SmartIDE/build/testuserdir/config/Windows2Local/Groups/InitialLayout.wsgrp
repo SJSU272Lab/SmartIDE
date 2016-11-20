@@ -3,5 +3,5 @@
 <group version="2.0">
     <module name="org.netbeans.core.ide/1" spec="1.0.0" />
     <name unique="InitialLayout" />
-    <state opened="false" />
+    <state opened="true" />
 </group>

@@ -10,9 +10,11 @@ org.netbeans.api.editor.EditorRegistry
 java.lang.String
 ||:org.myorg.smartide.SmartFixTopComponent
 java.lang.StringBuilder
+java.lang.System
 java.awt.event.ActionEvent
 javax.swing.JTextArea
 org.openide.windows.TopComponent
+java.io.PrintStream
 org.openide.awt.Mnemonics
 javax.swing.GroupLayout$ParallelGroup
 java.io.InputStreamReader
@@ -26,6 +28,7 @@ java.io.BufferedReader
 java.util.Properties
 javax.swing.GroupLayout$SequentialGroup
 javax.swing.LayoutStyle
+org.openide.awt.HtmlBrowser$URLDisplayer
 java.lang.Exception
 javax.swing.GroupLayout$Alignment
 javax.swing.GroupLayout
@@ -35,6 +38,7 @@ java.net.URL
 java.lang.Short
 javax.swing.GroupLayout$Group
 java.lang.String
+org.openide.awt.HtmlBrowser
 org.myorg.smartide.SmartFixTopComponent
 ||:org.myorg.smartide.SmartFixTopComponent$1
 java.lang.Object
