@@ -15,7 +15,7 @@ var retrieveRecord = require('./routes/retrieveRecord');
 
 var app = express();
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/record');
+mongoose.connect('mongodb://mongodb/record');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

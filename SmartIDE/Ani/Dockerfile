@@ -1,3 +1,12 @@
+#Build: docker build -f Dockerfile -t smartide/node .
+
+#Start Mongo
+#docker run -d --name smartide-mongodb mongo 
+
+#Link mongodb and node js 
+#docker run -d -p 3000:3000 --link smartide-mongodb:mongodb smartide/node
+
+
 FROM node:argon
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
