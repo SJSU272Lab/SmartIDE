@@ -8,8 +8,8 @@ cluster./Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/webs
 cluster./Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/profiler=1475191595000
 cluster./Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/harness=1475191125000
 cluster./Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javafx=1475191956000
-cluster./Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster=1479671069000
-user=1479671069000
+cluster./Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster=1479761004000
+user=1479761004000
 crc=7
 locale=en_US
 branding=nb

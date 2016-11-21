@@ -113,7 +113,7 @@ public final class SmartFixTopComponent extends TopComponent {
             URL url = new URL(controllerAPI+keyWord);
             System.out.println(controllerAPI+keyWord);
             textArea.setText("Loading...");
-            HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
+            //HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
             
             
             BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));

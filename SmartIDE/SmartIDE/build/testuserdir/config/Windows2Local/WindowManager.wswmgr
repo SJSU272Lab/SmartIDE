@@ -44,11 +44,12 @@
     <active-mode name="editor"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
     <tc-list>
-  <tc-id id="SmartFixTopComponent"/>
   <tc-id id="MultiView-java#002Eso2D0988CFtext#002Ehistory#007C"/>
-  <tc-id id="navigatorTC"/>
-  <tc-id id="Welcome"/>
+  <tc-id id="output"/>
+  <tc-id id="SmartFixTopComponent"/>
   <tc-id id="projectTabLogical_tc"/>
+  <tc-id id="Welcome"/>
+  <tc-id id="navigatorTC"/>
   <tc-id id="projectTab_tc"/>
   <tc-id id="services"/>
     </tc-list>
