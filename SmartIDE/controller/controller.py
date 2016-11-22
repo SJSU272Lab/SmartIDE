@@ -17,7 +17,7 @@ def api_GET_PUT_DELETE(keyword):
         r_db = requests.get('http://localhost:3000/insertRecord')
         print r_db.text
         #Then, search the google 
-        r_google = requests.get('http://localhost:5000/%s'%keyword)
+        r_google = requests.get('http://localhost:4000/search?question=%s'%keyword)
 
 
         dictA = json.loads(r_db.text)

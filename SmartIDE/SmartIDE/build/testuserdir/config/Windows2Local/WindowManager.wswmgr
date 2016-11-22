@@ -3,9 +3,9 @@
 <windowmanager version="2.1">
     <main-window>
   <joined-properties
-   x="-6"
+   x="0"
    y="65"
-   width="1314"
+   width="1318"
    height="747"
    relative-x="0.0"
    relative-y="0.0"
@@ -44,11 +44,12 @@
     <active-mode name="editor"/>
     <toolbar configuration="Standard" preferred-icon-size="24"/>
     <tc-list>
-  <tc-id id="SmartFixTopComponent"/>
   <tc-id id="MultiView-java#002Eso2D0988CFtext#002Ehistory#007C"/>
-  <tc-id id="navigatorTC"/>
-  <tc-id id="Welcome"/>
+  <tc-id id="output"/>
+  <tc-id id="SmartFixTopComponent"/>
   <tc-id id="projectTabLogical_tc"/>
+  <tc-id id="Welcome"/>
+  <tc-id id="navigatorTC"/>
   <tc-id id="projectTab_tc"/>
   <tc-id id="services"/>
     </tc-list>

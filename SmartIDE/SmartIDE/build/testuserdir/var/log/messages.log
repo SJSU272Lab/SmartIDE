@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Friday, November 18, 2016 11:46:18 AM PST
+>Log Session: Monday, November 21, 2016 12:43:25 PM PST
 >System Info: 
   Product Version         = NetBeans IDE 8.2 (Build 201609300101) (#5fd841261bf9)
   Operating System        = Mac OS X version 10.11.5 running on x86_64
@@ -8,9 +8,9 @@
   Java Home               = /Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre
   System Locale; Encoding = en_US (nb); UTF-8
   Home Directory          = /Users/Luckman
-  Current Directory       = /Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE
-  User Directory          = /Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir
-  Cache Directory         = /Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir/var/cache
+  Current Directory       = /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE
+  User Directory          = /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir
+  Cache Directory         = /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir/var/cache
   Installation            = /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide
@@ -20,13 +20,13 @@
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/profiler
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/harness
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javafx
-                            /Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
+                            /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
                             /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform
   Boot & Ext. Classpath   = /Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/classes:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/jaccess.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/System/Library/Java/Extensions/MRJToolkit.jar
   Application Classpath   = /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/boot.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-modules.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-util-lookup.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-util-ui.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/org-openide-util.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/boot_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-modules_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-lookup_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-ui_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-ui_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-ui_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util-ui_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/lib/locale/org-openide-util_zh_CN.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/lib/tools.jar
   Startup Classpath       = /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/asm-all-5.0.1.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/core-base.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/core.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/org-netbeans-libs-asm.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/org-openide-filesystems-compat8.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/org-openide-filesystems.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core-base_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core-base_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core-base_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core-base_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/core_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-netbeans-libs-asm_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-netbeans-libs-asm_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-netbeans-libs-asm_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-netbeans-libs-asm_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems-compat8_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems-compat8_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems-compat8_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems-compat8_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/org-netbeans-upgrader.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/core_nb_zh_CN.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_ja.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_ru.jar:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb/core/locale/org-netbeans-upgrader_zh_CN.jar
 -------------------------------------------------------------------------------
-WARNING [org.netbeans.modules.netbinox]: Cannot compute install area. No common prefix between /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ and /Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
+WARNING [org.netbeans.modules.netbinox]: Cannot compute install area. No common prefix between /Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ and /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
 INFO [org.netbeans.modules.netbinox]: Install area set to file:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/
 WARNING [org.netbeans.core.modules]: the modules [org.netbeans.modules.form.nb] use org.jdesktop.layout which is deprecated: Use javax.swing.GroupLayout instead. (In form editor: select Form ... in Inspector; change Layout Generation Style to Standard Java 6 code.)
 WARNING [org.netbeans.core.modules]: the modules [org.netbeans.modules.java.editor.lib, org.netbeans.modules.xml.text] use org.netbeans.modules.editor.deprecated.pre65formatting which is deprecated.
@@ -537,7 +537,7 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.netbeans.core.io.ui/1 [1.30.1 201609300101]
 	org.netbeans.core.browser/1 [1.28.1.1 1 201609300101]
 	org.netbeans.core.browser.webview/1 [1.15.1.1.1 1 201609300101]
-	org.myorg.smartide [1.0 161117]
+	org.myorg.smartide [1.0 161121]
 	org.eclipse.mylyn.commons.xmlrpc [3.17.0 3.17.0.v20150625-2042]
 	org.eclipse.mylyn.commons.repositories.core [1.9.0 1.9.0.v20150625-2042]
 	org.eclipse.mylyn.commons.core [3.17.0 3.17.0.v20150625-2042]
@@ -554,19 +554,19 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	com.jcraft.jzlib [1.0.7 1.0.7]
 	com.googlecode.javaewah.JavaEWAH [0.7.9 0.7.9]
 	com.google.guava [15.0.0 15.0.0]
-INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.mylyn.wikitext.confluence.core@2.6.0.v20150901-2143 resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.mylyn.wikitext.markdown.core@2.6.0.v20150901-2143 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.mylyn.wikitext.textile.core@2.6.0.v20150901-2143 resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.mylyn.wikitext.confluence.core@2.6.0.v20150901-2143 resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.jgit.java7@3.6.2.201501210735-r resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.boot@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.json@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.netbeans.html.ko4j@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.boot.fx@1.3.0 resolved
-INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.geo@1.3.0 resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle org.netbeans.html.xhr4j@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.boot.script@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.sound@1.3.0 resolved
-INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.jgit.java7@3.6.2.201501210735-r resolved
-INFO [org.netbeans.core.netigso.Netigso]: bundle org.netbeans.html.xhr4j@1.3.0 resolved
-INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.mylyn.wikitext.markdown.core@2.6.0.v20150901-2143 resolved
+INFO [org.netbeans.core.netigso.Netigso]: bundle net.java.html.geo@1.3.0 resolved
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 started
 INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network proxy resolver: Mac
 INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network proxy reloading failed! Trying fallback resolver.
@@ -574,13 +574,11 @@ INFO [org.netbeans.core.network.proxy.fallback.FallbackNetworkProxy]: Fallback s
 INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network proxy reloading succeeded. Fallback provider was successful.
 INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network proxy - mode: direct
 INFO [org.netbeans.core.network.proxy.NetworkProxyReloader]: System network proxy: fell to default (correct if direct mode went before)
-INFO [org.openide.awt.Toolbar]: Too long AWTTask: 659 ms for org.openide.awt.Toolbar$Folder@258d76c(FolderList{MultiFileObject@3c540d9a[Toolbars/Build]})
-INFO [org.openide.awt.Toolbar]: Too long AWTTask: 913 ms for org.openide.awt.Toolbar$Folder@705e9595(FolderList{MultiFileObject@5510fe69[Toolbars/Debug]})
 Diagnostic information
 Input arguments:
 	-Djdk.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
 	-Dnetbeans.default_userdir_root=/Users/Luckman/Library/Application Support/NetBeans
-	-Dnetbeans.dirs=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ergonomics:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/apisupport:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/webcommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/websvccommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/profiler:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/python:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/php:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/identity:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cnd:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cndext:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/dlight:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/groovy:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extra:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javacard:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javafx::/Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
+	-Dnetbeans.dirs=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/nb:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ergonomics:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/ide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extide:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/java:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/apisupport:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/webcommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/websvccommon:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/enterprise:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/mobility:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/profiler:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/python:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/php:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/identity:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/harness:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cnd:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/cndext:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/dlight:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/groovy:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/extra:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javacard:/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/javafx::/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/cluster
 	-Dnetbeans.home=/Applications/NetBeans/NetBeans 8.2.app/Contents/Resources/NetBeans/platform
 	-Dnetbeans.importclass=org.netbeans.upgrade.AutoUpgrade
 	-Dnetbeans.accept_license_class=org.netbeans.license.AcceptLicense
@@ -603,96 +601,52 @@ Input arguments:
 	-DaddExports:java.desktop/sun.awt.im=ALL-UNNAMED
 	-DaddExports:java.management/sun.management=ALL-UNNAMED
 	-XX:+HeapDumpOnOutOfMemoryError
-	-XX:HeapDumpPath=/Users/Luckman/Documents/SJSU/Course/2016 Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir/var/log/heapdump.hprof
+	-XX:HeapDumpPath=/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/project/Fall16-Team6/SmartIDE/SmartIDE/build/testuserdir/var/log/heapdump.hprof
 Compiler: HotSpot 64-Bit Tiered Compilers
 Heap memory usage: initial 32.0MB maximum 910.5MB
 Non heap memory usage: initial 2.4MB maximum -1b
-Garbage collector: PS Scavenge (Collections=17 Total time spent=0s)
+Garbage collector: PS Scavenge (Collections=20 Total time spent=0s)
 Garbage collector: PS MarkSweep (Collections=4 Total time spent=0s)
-Classes: loaded=9353 total loaded=9354 unloaded 0
+Classes: loaded=9942 total loaded=9944 unloaded 0
 INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 17,179,869,184
-INFO [org.openide.awt.Toolbar]: Too long AWTTask: 810 ms for org.openide.awt.MenuBar$LazyMenu$MenuFolder@2df7a033(FolderList{MultiFileObject@5088ed5a[Menu/Refactoring]})
 INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: Found target for /Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java: /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 6,564 ms
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 19 binary roots took: 1,769 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 2,306 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 19 binary roots took: 390 ms
 INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: /Users/Luckman/NetBeansProjects/JavaApplication3/test took: 1 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 0 ms]
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: /Users/Luckman/NetBeansProjects/JavaApplication3/src took: 751 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
-INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 2 source roots took: 752 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: /Users/Luckman/NetBeansProjects/JavaApplication3/src took: 157 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 2 source roots took: 158 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 2 ms]
 WARNING [org.openide.filesystems.Ordering]: Not all children in Menu/Window/ marked with the position attribute: [org-myorg-smartide-SmartFixTopComponent.shadow], but some are: [org-netbeans-modules-project-ui-logical-tab-action.shadow, org-netbeans-modules-project-ui-physical-tab-action.shadow, org-netbeans-modules-favorites-View.shadow, org-netbeans-core-ide-ServicesTabAction.shadow, org-netbeans-modules-navigator-ShowNavigatorAction.shadow, org-netbeans-modules-tasklist-ui-TaskListAction.shadow, org-netbeans-modules-tasks-ui-DashboardTopComponent.shadow, org-netbeans-core-io-ui-IOWindowAction.shadow, SwitchToRecentDocumentAction.shadow, Debug, org-myorg-smartide-SmartFix-separatorBefore.instance, org-myorg-smartide-SmartFix.shadow, org-myorg-smartide-SmartFix-separatorAfter.instance, Profile, Web, Tools, Separator3.instance, ConfigureWindow, org-netbeans-core-windows-actions-ResetWindowsAction.shadow, Separator4.instance, CloseWindowAction.shadow, CloseAllDocumentsAction.shadow, CloseAllButThisAction.shadow, GroupsMenuAction.shadow, DocumentsAction.shadow]
+INFO [org.netbeans.modules.parsing.impl.TaskProcessor]: Task: CancelableTaskWrapper[task: org.netbeans.modules.java.hints.spiimpl.hints.HintsTask@2e3fb992, phase: RESOLVED, priority: 500] : class org.netbeans.modules.java.source.JavaSourceAccessor$CancelableTaskWrapper ignored cancel for 1,599 ms.
 INFO [org.netbeans.modules.autoupdate.updateprovider.AutoupdateCatalogParser]: Unpaired license 00000008 without any module.
-INFO [org.netbeans.modules.parsing.impl.TaskProcessor]: Task: org.netbeans.modules.java.editor.semantic.SemanticHighlighter@299e5c95 : class org.netbeans.modules.java.editor.semantic.SemanticHighlighter ignored cancel for 64 ms.
-INFO [org.netbeans.modules.parsing.impl.TaskProcessor]: Task: CancelableTaskWrapper[task: org.netbeans.modules.java.hints.spiimpl.hints.HintsTask@53f046c9, phase: RESOLVED, priority: 500] : class org.netbeans.modules.java.source.JavaSourceAccessor$CancelableTaskWrapper ignored cancel for 6,278 ms.
-INFO: No FileObject found for the following URL: file:/Users/Luckman/NetBeansProjects/JavaApplication3/test/
-java.lang.IllegalStateException: No FileObject found for the following URL: file:/Users/Luckman/NetBeansProjects/JavaApplication3/test/
-	at org.netbeans.modules.java.testrunner.CommonTestUtil.getTestTargets(CommonTestUtil.java:155)
-	at org.netbeans.modules.java.testrunner.providers.JavaCommonTestUtilProvider.getTestTargets(JavaCommonTestUtilProvider.java:60)
-	at org.netbeans.modules.java.testrunner.ui.hints.Utils.populateLocations(Utils.java:145)
-	at org.netbeans.modules.java.testrunner.ui.hints.Utils.getValidCombinations(Utils.java:85)
-	at org.netbeans.modules.java.testrunner.ui.hints.CreateTestClassHint.computeWarning(CreateTestClassHint.java:108)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.netbeans.modules.java.hints.providers.code.CodeHintProviderImpl$WorkerImpl.createErrors(CodeHintProviderImpl.java:340)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.runHint(HintsInvoker.java:821)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.access$400(HintsInvoker.java:113)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker$ScannerImpl.runAndAdd(HintsInvoker.java:680)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker$ScannerImpl.scanDoNotGoDeeper(HintsInvoker.java:734)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeSuggestions(HintsInvoker.java:408)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:244)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:216)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:189)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:151)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsTask.run(HintsTask.java:137)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsTask.run(HintsTask.java:88)
-	at org.netbeans.modules.java.source.JavaSourceAccessor$CancelableTaskWrapper.run(JavaSourceAccessor.java:298)
-	at org.netbeans.modules.parsing.impl.TaskProcessor.callParserResultTask(TaskProcessor.java:584)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$RequestPerformer.run(TaskProcessor.java:809)
-	at org.openide.util.lookup.Lookups.executeWith(Lookups.java:304)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$RequestPerformer.execute(TaskProcessor.java:725)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$CompilationJob.run(TaskProcessor.java:686)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1443)
-	at org.netbeans.modules.openide.util.GlobalLookup.execute(GlobalLookup.java:68)
-	at org.openide.util.lookup.Lookups.executeWith(Lookups.java:303)
-	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2058)
-INFO: No FileObject found for the following URL: file:/Users/Luckman/NetBeansProjects/JavaApplication3/test/
-java.lang.IllegalStateException: No FileObject found for the following URL: file:/Users/Luckman/NetBeansProjects/JavaApplication3/test/
-	at org.netbeans.modules.java.testrunner.CommonTestUtil.getTestTargets(CommonTestUtil.java:155)
-	at org.netbeans.modules.java.testrunner.providers.JavaCommonTestUtilProvider.getTestTargets(JavaCommonTestUtilProvider.java:60)
-	at org.netbeans.modules.java.testrunner.ui.hints.Utils.populateLocations(Utils.java:145)
-	at org.netbeans.modules.java.testrunner.ui.hints.Utils.getValidCombinations(Utils.java:85)
-	at org.netbeans.modules.java.testrunner.ui.hints.CreateTestMethodsHint.computeWarning(CreateTestMethodsHint.java:114)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.netbeans.modules.java.hints.providers.code.CodeHintProviderImpl$WorkerImpl.createErrors(CodeHintProviderImpl.java:340)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.runHint(HintsInvoker.java:821)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.access$400(HintsInvoker.java:113)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker$ScannerImpl.runAndAdd(HintsInvoker.java:680)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker$ScannerImpl.scanDoNotGoDeeper(HintsInvoker.java:734)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeSuggestions(HintsInvoker.java:408)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:244)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:216)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:189)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsInvoker.computeHints(HintsInvoker.java:151)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsTask.run(HintsTask.java:137)
-	at org.netbeans.modules.java.hints.spiimpl.hints.HintsTask.run(HintsTask.java:88)
-	at org.netbeans.modules.java.source.JavaSourceAccessor$CancelableTaskWrapper.run(JavaSourceAccessor.java:298)
-	at org.netbeans.modules.parsing.impl.TaskProcessor.callParserResultTask(TaskProcessor.java:584)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$RequestPerformer.run(TaskProcessor.java:809)
-	at org.openide.util.lookup.Lookups.executeWith(Lookups.java:304)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$RequestPerformer.execute(TaskProcessor.java:725)
-	at org.netbeans.modules.parsing.impl.TaskProcessor$CompilationJob.run(TaskProcessor.java:686)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1443)
-	at org.netbeans.modules.openide.util.GlobalLookup.execute(GlobalLookup.java:68)
-	at org.openide.util.lookup.Lookups.executeWith(Lookups.java:303)
-	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:2058)
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: modified: GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+WARNING [org.netbeans.TopSecurityManager]: use of system property netbeans.user has been obsoleted in favor of InstalledFileLocator/Places at org.netbeans.modules.java.api.common.project.BaseActionProvider.verifyUserPropertiesFile(BaseActionProvider.java:2322)
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: out of date (target: 0 vs. source: 1,479,761,039,000): GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: out of date (target: 0 vs. source: 1,479,761,039,000): GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+WARNING [org.netbeans.modules.options.keymap.LayersBridge]: Invalid shortcut: org.openide.loaders.BrokenDataShadow@1b2c7463[MultiFileObject@5a6d7529[Keymaps/NetBeans/D-BACK_QUOTE.shadow]]
+WARNING [null]: Last record repeated again.
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: modified: GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.modules.bugtracking.BugtrackingManager]: Loading stored repositories took 120 millis.
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: out of date (target: 0 vs. source: 1,479,761,039,000): GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: modified: GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+WARNING [org.netbeans.modules.java.hints]: document changed, but not canceled?
+WARNING [org.netbeans.modules.java.hints]: len = 463
+WARNING [org.netbeans.modules.java.hints]: startOffset = 463
+WARNING [org.netbeans.modules.java.hints]: endOffset = 463
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: out of date (target: 0 vs. source: 1,479,761,039,000): GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: modified: GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.spi.project.support.ant.GlobFileBuiltQuery]: isBuilt: false from GFBQ.StatusImpl[/Users/Luckman/NetBeansProjects/JavaApplication3/src/javaapplication3/JavaApplication3.java@afa5edd2:7430f5bf -> /Users/Luckman/NetBeansProjects/JavaApplication3/build/classes/javaapplication3/JavaApplication3.class]
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Resolving dependencies took: 58 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 0 binary roots took: 0 ms
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Indexing of: /Users/Luckman/NetBeansProjects/JavaApplication3/test took: 86 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 0 ms]
+INFO [org.netbeans.modules.parsing.impl.indexing.RepositoryUpdater]: Complete indexing of 1 source roots took: 86 ms (New or modified files: 0, Deleted files: 0) [Adding listeners took: 0 ms]
+WARNING [org.openide.util.WeakListenerImpl]: Can't remove javax.swing.event.ChangeListener using method org.netbeans.modules.java.j2seproject.J2SEActionProvider$CosAction.removeChangeListener from org.netbeans.modules.java.j2seproject.J2SEActionProvider$CosAction@d7ab875
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 256
-WARNING [org.netbeans.core.TimableEventQueue]: too much time in AWT thread org.netbeans.modules.sampler.InternalSampler@c0cafc5
 INFO [org.netbeans.core.netigso.Netigso]: bundle org.eclipse.osgi@3.9.1.v20140110-1610 stopped
 INFO [null]: Last record repeated again.
