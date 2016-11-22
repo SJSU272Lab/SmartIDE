@@ -22,7 +22,7 @@ EXPOSE 8080
 CMD [ "npm", "start" ]
 
 #Start Mongo
-#docker run -d --name smartide-mongodb mongo 
+#docker run -d --name smartide-mongo mongo 
 
 #Link rabbit, mongo and node 
-#docker run -d -p 3000:3000 --link smartide-mongo:mongodb --link ide-rabbit smartiderabbit/node
+#docker run -d -p 7000:7000 --link smartide-mongo:mongodb --link ide-rabbit smartiderabbit/node
