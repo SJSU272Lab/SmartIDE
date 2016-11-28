@@ -1,6 +1,6 @@
 var amqp = require('amqp');
 
-var connection = amqp.createConnection({host:'smartide-rabbit'});
+var connection = amqp.createConnection({host:'127.0.0.1'});
 var rpc = new (require('./amqprpc'))(connection);
 
 //make request to rabbitmq
