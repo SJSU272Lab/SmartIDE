@@ -25,4 +25,4 @@ CMD [ "npm", "start" ]
 #docker run -d --name smartide-mongo mongo 
 
 #Link rabbit, mongo and node 
-#docker run -d -p 7000:7000 --link smartide-mongo:mongodb --link ide-rabbit smartiderabbit/node
+#docker run -d -p --link smartide-mongo:mongodb --link ide-rabbit smartiderabbit/node
