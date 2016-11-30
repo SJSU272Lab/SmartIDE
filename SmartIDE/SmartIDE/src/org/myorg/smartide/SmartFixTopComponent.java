@@ -5,14 +5,11 @@
  */
 package org.myorg.smartide;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.URL;
 import javax.swing.JTextArea;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
-import org.openide.awt.HtmlBrowser;
 import org.openide.windows.TopComponent;
 import org.openide.util.NbBundle.Messages;
 
@@ -54,7 +51,7 @@ public final class SmartFixTopComponent extends TopComponent {
     public JTextArea getTextArea() {
         return textArea;
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -65,16 +62,16 @@ public final class SmartFixTopComponent extends TopComponent {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
-        searchButton = new javax.swing.JButton();
+        answerButton = new javax.swing.JButton();
 
         textArea.setColumns(20);
         textArea.setRows(5);
         jScrollPane1.setViewportView(textArea);
 
-        org.openide.awt.Mnemonics.setLocalizedText(searchButton, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.searchButton.text")); // NOI18N
-        searchButton.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(answerButton, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.answerButton.text")); // NOI18N
+        answerButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchButtonActionPerformed(evt);
+                answerButtonActionPerformed(evt);
             }
         });
 
@@ -88,21 +85,21 @@ public final class SmartFixTopComponent extends TopComponent {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(searchButton)))
+                        .addComponent(answerButton)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(searchButton)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(answerButton)
                 .addContainerGap(38, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+    private void answerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_answerButtonActionPerformed
         
         try
         {
@@ -111,30 +108,19 @@ public final class SmartFixTopComponent extends TopComponent {
             String keyWord = textArea.getText();
             keyWord = keyWord.replace(' ', '_');
             URL url = new URL(controllerAPI+keyWord);
-            System.out.println(controllerAPI+keyWord);
-            textArea.setText("Loading...");
-            //HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
             
+            //TODO send answer back to controller
             
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            String message = "";
-            String text = "";
-            
-            while((text = reader.readLine()) != null)
-                message += text;
-            
-            reader.close();
-            textArea.setText(message);
         }
         catch(Exception ex)
         {
             
         }
-    }//GEN-LAST:event_searchButtonActionPerformed
+    }//GEN-LAST:event_answerButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton answerButton;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton searchButton;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
     @Override

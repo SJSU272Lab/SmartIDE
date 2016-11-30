@@ -7,6 +7,9 @@ package org.myorg.smartide;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URL;
 import javax.swing.JTextArea;
 import javax.swing.text.JTextComponent;
 import org.netbeans.api.editor.EditorRegistry;
@@ -42,27 +45,42 @@ public final class SmartFix implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ev) {
-        JTextComponent editor = EditorRegistry.lastFocusedComponent();
-        String selection = editor.getSelectedText();
-                
-        SmartFixTopComponent smartFix = (SmartFixTopComponent) WindowManager.getDefault().findTopComponent("SmartFixTopComponent");
+        try
+        {
+            //Luckman
+            String controllerAPI = "http://localhost:1314/controller/";
+            
+            JTextComponent editor = EditorRegistry.lastFocusedComponent();
+            String keyWord = editor.getSelectedText();
+            
+            keyWord = keyWord.replace(' ', '_');
+            URL url = new URL(controllerAPI+keyWord);
+            System.out.println(controllerAPI+keyWord);
+            //HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
+                    
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+            String message = "";
+            String text = "";
+            
+            while((text = reader.readLine()) != null)
+                message += text;
+            
+            reader.close();
+            //textArea.setText(message);
+            
+            SmartFixTopComponent smartFix = (SmartFixTopComponent) WindowManager.getDefault().findTopComponent("SmartFixTopComponent");
         
-        if(!smartFix.isOpened())
-            smartFix.open();
-        smartFix.requestFocus();
-        smartFix.requestActive();
-        
-        JTextArea text = smartFix.getTextArea();
-        text.setText(selection);
-        
-        // BELOW CODE LAUNCHES BROWSER WITH SEARCH TERMS
-        /*
-        if(selection != null)
-        try {
-            String searchText = URLEncoder.encode(selection, "UTF-8");
-            HtmlBrowser.URLDisplayer.getDefault().showURL(new URL("http://www.google.com/search?hl=en&q=" + searchText));
-        } catch (Exception eee) {
-            return;
-        }*/
+            if(!smartFix.isOpened())
+                smartFix.open();
+            smartFix.requestFocus();
+            smartFix.requestActive();
+            
+            JTextArea textArea = smartFix.getTextArea();
+            textArea.setText(message);
+        }
+        catch(Exception ex)
+        {
+            
+        } 
     }
 }

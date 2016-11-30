@@ -24,6 +24,13 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_SmartFixTopComponent");
     }
     /**
+     * @return <i>Search</i>
+     * @see SmartSearch
+     */
+    static String CTL_SmartSearch() {
+        return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_SmartSearch");
+    }
+    /**
      * @return <i>This is a SmartFix window</i>
      * @see SmartFixTopComponent
      */
