@@ -19,11 +19,14 @@ def api_GET_PUT_DELETE(keyword):
         #Then, search the google 
         r_google = requests.get('http://localhost:4000/search?question=%s'%keyword)
 
+        #Then, search the QA system
+        r_QA = requests.get('http://localhost:2666/qa/%s'%keyword.replace(' ', '---'))
 
         dictA = json.loads(r_db.text)
         dictB = json.loads(r_google.text)
+        dictC = json.loads(r_QA.text)
 
-        merged_dict = {key: value for (key, value) in (dictA.items() + dictB.items())}
+        merged_dict = {key: value for (key, value) in (dictA.items() + dictB.items() + dictC.items() )}
 
         # string dump of the merged dict
         r = json.dumps(merged_dict)

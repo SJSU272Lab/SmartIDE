@@ -12,5 +12,7 @@ osascript -e 'tell application "Terminal" to do script "cd /Users/Luckman/Docume
 # run message queue service
 osascript -e 'tell application "Terminal" to do script "cd /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE; node Ani/272_Team6_ProjectRabbitMqServer/server.js"'
 
+# run QA
+osascript -e 'tell application "Terminal" to do script "cd /Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/QA; python QA.py"'
 
 
