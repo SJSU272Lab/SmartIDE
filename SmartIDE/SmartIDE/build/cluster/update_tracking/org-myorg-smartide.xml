@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.myorg.smartide">
+    <module_version install_time="1480481291500" last="true" origin="installer" specification_version="1.0">
+        <file crc="2659812834" name="config/Modules/org-myorg-smartide.xml"/>
+        <file crc="3335674654" name="modules/org-myorg-smartide.jar"/>
+    </module_version>
+</module>

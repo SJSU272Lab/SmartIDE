@@ -1,0 +1,15 @@
+version: '1'
+services:
+  controller:
+    build: controller/.
+    ports:
+     - "1314:1314"
+    volumes:
+     - .:/control
+  googleAPI:
+    build: GoogleAPI_DatParser/.
+    ports:
+     - "5000:5000"
+    volumes:
+     - .:/googleAPI
+
