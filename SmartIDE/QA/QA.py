@@ -21,7 +21,7 @@ def api_GET_PUT_DELETE(keyword):
 
         js = ""
         if(keyword != ""):
-            keyword = keyword.replace("%%%%", ' ')
+            keyword = keyword.replace("---", ' ')
             Question, Answer = test.Decode(keyword)
             js = {"Question": Question, "Answer": Answer}            
 
