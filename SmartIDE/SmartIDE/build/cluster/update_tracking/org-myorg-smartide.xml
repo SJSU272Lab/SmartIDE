@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="org.myorg.smartide">
+<<<<<<< HEAD
+    <module_version install_time="1480734006173" last="true" origin="installer" specification_version="1.0">
+        <file crc="2659812834" name="config/Modules/org-myorg-smartide.xml"/>
+        <file crc="1275425522" name="modules/ext/gson-2.2.2.jar"/>
+        <file crc="2767170478" name="modules/ext/java-json.jar"/>
+        <file crc="3967460616" name="modules/org-myorg-smartide.jar"/>
+=======
     <module_version install_time="1480724597656" last="true" origin="installer" specification_version="1.0">
         <file crc="3194993188" name="config/Modules/org-myorg-smartide.xml"/>
         <file crc="1189667141" name="modules/org-myorg-smartide.jar"/>
+>>>>>>> origin/master
     </module_version>
 </module>

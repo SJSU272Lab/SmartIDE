@@ -5,8 +5,11 @@
  */
 package org.myorg.smartide;
 
+import com.google.gson.Gson;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.net.URL;
-import javax.swing.JTextArea;
+import java.util.ArrayList;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
@@ -39,6 +42,11 @@ import org.openide.util.NbBundle.Messages;
 })
 public final class SmartFixTopComponent extends TopComponent {
 
+    private final SmartFixTopComponent self;
+    private ArrayList<Answer> answers = new ArrayList<>();
+    private int answerIterator = 0;
+    private String answerMarkedText = "===\nThank you!\nYour answer has been recorded.\n===\n\n";
+    
     public SmartFixTopComponent() {
         initComponents();
         setName(Bundle.CTL_SmartFixTopComponent());
@@ -46,10 +54,48 @@ public final class SmartFixTopComponent extends TopComponent {
         putClientProperty(TopComponent.PROP_KEEP_PREFERRED_SIZE_WHEN_SLIDED_IN, Boolean.TRUE);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
+        self = this;
     }
     
-    public JTextArea getTextArea() {
-        return textArea;
+    public void search(String searchText) {
+        try{
+            String controllerAPI = "http://localhost:1314/controller/";
+            String keyWord = searchText.replaceAll(' ', '---');
+            URL url = new URL(controllerAPI+keyWord);
+            System.out.println(controllerAPI+keyWord);
+            
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+            String message = "";
+            String text = "";
+            
+            while((text = reader.readLine()) != null)
+                message += text;
+            
+            reader.close();
+
+            Gson g = new Gson();
+            ResultSet resultSet = g.fromJson(message, ResultSet.class);
+            answers = resultSet.getResultSet();
+            
+            showComponent();
+            questionText.setText(resultSet.getQuestion());
+            jLabel1.setText(answerIterator+1 + "/" + answers.size());
+            nextButton.setEnabled(true);
+            answerButton.setEnabled(true);
+            
+            textArea.setText(answers.get(answerIterator).getAnswer());
+            textArea.setCaretPosition(0);
+        }
+        catch(Exception e){
+            
+        }
+    }
+    
+    private void showComponent() {
+        if(!self.isOpened())
+            self.open();
+        self.requestFocus();
+        self.requestActive();
     }
     
     /**
@@ -63,6 +109,11 @@ public final class SmartFixTopComponent extends TopComponent {
         jScrollPane1 = new javax.swing.JScrollPane();
         textArea = new javax.swing.JTextArea();
         answerButton = new javax.swing.JButton();
+        nextButton = new javax.swing.JButton();
+        answerLabel = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        questionLabel = new javax.swing.JLabel();
+        questionText = new javax.swing.JLabel();
 
         textArea.setColumns(20);
         textArea.setRows(5);
@@ -75,6 +126,26 @@ public final class SmartFixTopComponent extends TopComponent {
             }
         });
 
+        org.openide.awt.Mnemonics.setLocalizedText(nextButton, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.nextButton.text")); // NOI18N
+        nextButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextButtonActionPerformed(evt);
+            }
+        });
+
+        answerLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(answerLabel, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.answerLabel.text")); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.jLabel1.text")); // NOI18N
+
+        questionLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(questionLabel, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.questionLabel.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(questionText, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.questionText.text")); // NOI18N
+        questionText.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        questionText.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -82,9 +153,19 @@ public final class SmartFixTopComponent extends TopComponent {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(questionLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(questionText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(answerLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(nextButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(answerButton)))
                 .addContainerGap())
         );
@@ -92,10 +173,20 @@ public final class SmartFixTopComponent extends TopComponent {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(questionLabel)
+                    .addComponent(questionText, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(answerButton)
-                .addContainerGap(38, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(answerLabel)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nextButton)
+                    .addComponent(answerButton))
+                .addGap(22, 22, 22))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -103,14 +194,19 @@ public final class SmartFixTopComponent extends TopComponent {
         
         try
         {
-            //Luckman
-            String controllerAPI = "http://localhost:1314/controller/";
-            String keyWord = textArea.getText();
-            keyWord = keyWord.replace(' ', '_');
-            URL url = new URL(controllerAPI+keyWord);
+            answerButton.setEnabled(false);
+            nextButton.setEnabled(false);
             
-            //TODO send answer back to controller
+            Gson g = new Gson();
+            String jsonAnswer = g.toJson(answers.get(answerIterator));
             
+            // TODO send jsonAnswer back to controller
+            
+            // update output
+            String message = textArea.getText();
+            message = answerMarkedText + message;
+            textArea.setText(message);
+            textArea.setCaretPosition(0);
         }
         catch(Exception ex)
         {
@@ -118,9 +214,26 @@ public final class SmartFixTopComponent extends TopComponent {
         }
     }//GEN-LAST:event_answerButtonActionPerformed
 
+    private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
+        if(answerIterator == answers.size()-1 )
+            answerIterator = 0;
+        else
+            answerIterator++;
+        
+        textArea.setText(answers.get(answerIterator).getAnswer());
+        textArea.setCaretPosition(0);
+        
+        jLabel1.setText(answerIterator+1 + "/" + answers.size());
+    }//GEN-LAST:event_nextButtonActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton answerButton;
+    private javax.swing.JLabel answerLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton nextButton;
+    private javax.swing.JLabel questionLabel;
+    private javax.swing.JLabel questionText;
     private javax.swing.JTextArea textArea;
     // End of variables declaration//GEN-END:variables
     @Override

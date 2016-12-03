@@ -5,10 +5,6 @@
  */
 package org.myorg.smartide;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import javax.swing.JTextArea;
 import org.openide.windows.WindowManager;
 
 /**
@@ -71,32 +67,10 @@ public class SearchPanel extends javax.swing.JPanel {
     
         SmartFixTopComponent smartFix = (SmartFixTopComponent) WindowManager.getDefault().findTopComponent("SmartFixTopComponent");
         
-            if(!smartFix.isOpened())
-                smartFix.open();
-            smartFix.requestFocus();
-            smartFix.requestActive();
-            JTextArea textArea = smartFix.getTextArea();
-            textArea.setText("Loading...");
         try
         {
-            
-            //Luckman
-            String controllerAPI = "http://localhost:1314/controller/";
             String keyWord = searchText.getText();
-            keyWord = keyWord.replace(' ', '_');
-            URL url = new URL(controllerAPI+keyWord);
-            System.out.println(controllerAPI+keyWord);
-            //HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
-            
-            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-            String message = "";
-            String text = "";
-            
-            while((text = reader.readLine()) != null)
-                message += text;
-            
-            reader.close();
-            textArea.setText(message);
+            smartFix.search(keyWord);
         }
         catch(Exception ex)
         {

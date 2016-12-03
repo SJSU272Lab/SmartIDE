@@ -7,10 +7,6 @@ package org.myorg.smartide;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
-import javax.swing.JTextArea;
 import javax.swing.text.JTextComponent;
 import org.netbeans.api.editor.EditorRegistry;
 import org.openide.cookies.EditorCookie;
@@ -47,10 +43,10 @@ public final class SmartFix implements ActionListener {
     public void actionPerformed(ActionEvent ev) {
         try
         {
-            //Luckman
-            String controllerAPI = "http://localhost:1314/controller/";
-            
             JTextComponent editor = EditorRegistry.lastFocusedComponent();
+<<<<<<< HEAD
+            String searchText = editor.getSelectedText();
+=======
             String keyWord = editor.getSelectedText();
             
             keyWord = keyWord.replaceAll(" ", "---");
@@ -67,16 +63,10 @@ public final class SmartFix implements ActionListener {
             
             reader.close();
             //textArea.setText(message);
+>>>>>>> origin/master
             
             SmartFixTopComponent smartFix = (SmartFixTopComponent) WindowManager.getDefault().findTopComponent("SmartFixTopComponent");
-        
-            if(!smartFix.isOpened())
-                smartFix.open();
-            smartFix.requestFocus();
-            smartFix.requestActive();
-            
-            JTextArea textArea = smartFix.getTextArea();
-            textArea.setText(message);
+            smartFix.search(searchText);
         }
         catch(Exception ex)
         {
