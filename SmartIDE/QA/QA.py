@@ -23,7 +23,7 @@ def api_GET_PUT_DELETE(keyword):
         if(keyword != ""):
             keyword = keyword.replace("---", ' ')
             Question, Answer = test.Decode(keyword)
-            js = {"Question": Question, "Answer": Answer}            
+            js = { "QA": {"Question": Question, "Answer": Answer}}            
 
         #js_dic = { "postID": postID } 
         #js = json.dumps(js_dic)

@@ -53,7 +53,7 @@ public final class SmartFix implements ActionListener {
             JTextComponent editor = EditorRegistry.lastFocusedComponent();
             String keyWord = editor.getSelectedText();
             
-            keyWord = keyWord.replace(' ', '_');
+            keyWord = keyWord.replaceAll(" ", "---");
             URL url = new URL(controllerAPI+keyWord);
             System.out.println(controllerAPI+keyWord);
             //HtmlBrowser.URLDisplayer.getDefault().showURLExternal(url);
