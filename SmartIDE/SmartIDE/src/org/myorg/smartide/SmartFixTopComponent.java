@@ -60,7 +60,7 @@ public final class SmartFixTopComponent extends TopComponent {
     public void search(String searchText) {
         try{
             String controllerAPI = "http://localhost:1314/controller/";
-            String keyWord = searchText.replaceAll(' ', '---');
+            String keyWord = searchText.replaceAll(" ", "---");
             URL url = new URL(controllerAPI+keyWord);
             System.out.println(controllerAPI+keyWord);
             

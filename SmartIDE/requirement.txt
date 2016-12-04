@@ -1,7 +1,8 @@
+==== for GoggleAPIServer, Controller, QA system ====
 flask
 google-api-python-client
 beautifulsoup4
-mongodb
-nodejs
-rabbitmq
 tensorflow
+
+==== for Ani’s database (mongoldb, node.js, rabbitmq) ==== (provided by Ani)
+Download and install node.js from https://nodejs.org/en/Download and install mongo dbDownload and install rabbit mqSave both the applications in your local and in the folder where you save the applications run below commands from command prompt/terminalnpm install --save expressnpm install --save mongoosenpm install --save amqpnpm install --save util
