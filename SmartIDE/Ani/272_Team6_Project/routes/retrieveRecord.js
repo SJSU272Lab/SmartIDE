@@ -5,9 +5,10 @@ var mq_client = require('../rpc/client');
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var json_responses = '';
-	var newQuestion = 'Mongoose promise error';
-	var newAnswer = "With mongoose@4.1 you can use any promises that you want var mongoose = require('mongoose'); mongoose.Promise = require('bluebird');";
-	var msg_payload = {"question": newQuestion};
+	var newQuestion = req.param("keyword");
+	var quesArray = newQuestion.split('+');
+	console.log("Keywords to be searched "+quesArray);
+	var msg_payload = {"question": quesArray};
 	
 	mq_client.make_request('retrieveRecord_queue',msg_payload, function(err,results){
 		console.log(results);
@@ -15,7 +16,7 @@ router.get('/', function(req, res, next) {
 			throw err;
 		}else{
 			if(results.code === '200'){
-				console.log("Answers "+results.value);
+				//console.log("Answers "+results.value);
 				json_responses = {'statusCode': '200', 'message': results.value};
 				res.send(json_responses);
 			}else{

@@ -2,10 +2,10 @@ var express = require('express');
 var router = express.Router();
 var mq_client = require('../rpc/client');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+/* POST update. */
+router.post('/', function(req, res, next) {
 	var json_responses = '';
-	var id = '583b868b424a6e217cf4b1bd';
+	var id = req.body.id;
 	var msg_payload = {"id": id};
 	
 	mq_client.make_request('updateRecord_queue',msg_payload, function(err,results){

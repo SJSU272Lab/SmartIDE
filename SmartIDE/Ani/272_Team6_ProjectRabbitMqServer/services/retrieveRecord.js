@@ -1,31 +1,51 @@
 var Record = require('../models/record');
+//var _ = require('underscore');
 var res = {};
+
+function sortUsing(property){
+    return function(a, b){
+        if(a[property] < b[property]){
+            return 1;
+        }else if(a[property] > b[property]){
+            return -1;
+        }else{
+            return 0;   
+        }
+    }
+}
 
 function retrieveRecord_request(msg, callback){
 	console.log("In handle retrieveRecord request:"+ msg.question);
-	Record.find({question: msg.question}, function(err, result){
-		console.log("In record find");
-		if(err){
-			throw err;
-		}
-		else{
-			if(result != ""){
-				console.log("In record if found");
-				res.code = "200";
-				res.value = result;
-				callback(null, res);
-			}else{
-				res.code = "400";
-				callback(null, res);
+	var answersArray = [];
+	var itemsProcessed = 0;
+	msg.question.forEach(function(question){
+		Record.find({keyword: question}, function(err, result){
+			console.log("In record find");
+			if(err){
+				throw err;
 			}
-		}
+			else{
+				itemsProcessed++;
+				result.forEach(function(answer){
+					answersArray.push(answer);
+				});
+				if(itemsProcessed == msg.question.length){
+					answersArray.sort(sortUsing("votes"));
+					res.code='200';
+					res.value=answersArray;
+					callback(null,res);
+				}
+			}
+		});
 	});
-	
 }
 
 function insertRecord_Request(msg, callback){
 	console.log("In handle insertRecord request " + msg);
 	var newRecord = new Record();
+	newRecord.keyword = msg.keyword;
+	newRecord.votes = msg.votes;
+	console.log("msg.votes");
 	newRecord.question = msg.question;
 	newRecord.answer = msg.answer;
 	newRecord.link = msg.link;
