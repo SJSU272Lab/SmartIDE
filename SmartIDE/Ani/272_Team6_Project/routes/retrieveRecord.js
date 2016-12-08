@@ -2,14 +2,13 @@ var express = require('express');
 var router = express.Router();
 var mq_client = require('../rpc/client');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+/* POST home page. */
+router.post('/', function(req, res, next) {
 	var json_responses = '';
-	var newQuestion = req.param("keyword");
+	var newQuestion = req.body.keyword;
 	var quesArray = newQuestion.split('+');
 	console.log("Keywords to be searched "+quesArray);
 	var msg_payload = {"question": quesArray};
-	
 	mq_client.make_request('retrieveRecord_queue',msg_payload, function(err,results){
 		console.log(results);
 		if(err){

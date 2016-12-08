@@ -1,5 +1,4 @@
 var Record = require('../models/record');
-//var _ = require('underscore');
 var res = {};
 
 function sortUsing(property){
@@ -18,6 +17,7 @@ function retrieveRecord_request(msg, callback){
 	console.log("In handle retrieveRecord request:"+ msg.question);
 	var answersArray = [];
 	var itemsProcessed = 0;
+	var sortedArray = 0;
 	msg.question.forEach(function(question){
 		Record.find({keyword: question}, function(err, result){
 			console.log("In record find");
@@ -30,10 +30,25 @@ function retrieveRecord_request(msg, callback){
 					answersArray.push(answer);
 				});
 				if(itemsProcessed == msg.question.length){
+					var seen = {};
+					var nonduplicateanswersArray = [];
+					var j=0;
 					answersArray.sort(sortUsing("votes"));
-					res.code='200';
-					res.value=answersArray;
-					callback(null,res);
+					for(var i=0; i<answersArray.length; i++){
+						(function(i){
+							sortedArray++;
+							var id = answersArray[i]._id; 
+							if(seen[id] !== 1){
+								seen[id] = 1;
+								nonduplicateanswersArray[j++]=answersArray[i]; 
+							}
+						})(i);
+					}
+					if(sortedArray == answersArray.length){
+						res.code='200';
+						res.value=nonduplicateanswersArray;
+						callback(null,res);
+					}
 				}
 			}
 		});
