@@ -1,0 +1,40 @@
+{
+    "keywords": [
+        "merge",
+        "sorting",
+        "doubly"
+    ],
+    "question": "c++ mergesort linked list",
+    "result": [
+        {
+            "answer": "<html><body><p>I have tried your code and it works perfectly.</p><p>Have you looked at the right list in the end?\nYour new head of the list is not the previous head, but the return value of\nthe Merge function.</p><pre><code>printList(myList);\nnode* sortedList =  MergeSort(myList);\nprintList(sortedList); //whole list sorted\nprintList(myList); //list (of elements not smaller that first element) sorted\n</code></pre><p>and printList() is the obvious function:</p><pre><code>void printList(node* my_node){\n    if(my_node == NULL) return;\n    else {\n        std::cout<<my_node->number<<\" \"<<std::endl; \n        printList(my_node->next);   \n    }\n}\n</code></pre></body></html>",
+            "link": "http://stackoverflow.com/questions/5630994/merge-sorting-a-linked-list",
+            "question": "Merge-sorting a linked list",
+            "vote":2
+        },
+        {
+            "answer": "<html><body><p>Wonder why it should be big challenge as it is stated here, here is a straightforward implementation in Java with out any \"clever tricks\".</p><pre class=\"lang-java prettyprint-override\"><code>//The main function\npublic Node merge_sort(Node head) {\n    if(head == null || head.next == null) { return head; }\n    Node middle = getMiddle(head);      //get the middle of the list\n    Node sHalf = middle.next; middle.next = null;   //split the list into two halfs\n\n    return merge(merge_sort(head),merge_sort(sHalf));  //recurse on that\n}\n\n//Merge subroutine to merge two sorted lists\npublic Node merge(Node a, Node b) {\n    Node dummyHead, curr; dummyHead = new Node(); curr = dummyHead;\n    while(a !=null && b!= null) {\n        if(a.info <= b.info) { curr.next = a; a = a.next; }\n        else { curr.next = b; b = b.next; }\n        curr = curr.next;\n    }\n    curr.next = (a == null) ? b : a;\n    return dummyHead.next;\n}\n\n//Finding the middle element of the list for splitting\npublic Node getMiddle(Node head) {\n    if(head == null) { return head; }\n    Node slow, fast; slow = fast = head;\n    while(fast.next != null && fast.next.next != null) {\n        slow = slow.next; fast = fast.next.next;\n    }\n    return slow;\n}\n</code></pre><p>Some more explanation here - <a href=\"http://www.dontforgettothink.com/2011/11/23/merge-sort-of-linked-list\">http://www.dontforgettothink.com/2011/11/23/merge-sort-of-linked-list</a></p></body></html>",
+            "link": "http://stackoverflow.com/questions/7685/merge-sort-a-linked-list",
+            "question": "Merge Sort a Linked List",
+            "vote":2
+        },
+        {
+            "answer": "<html><body><p>The general approach:</p><pre><code>if( list contains 0 or 1 item)\n    return the list;  // it is already sorted\nsplit the list into halves;\nmergesort( first part);\nmergesort( second part);\nmerge sorted parts;\nreturn the merged list;\n</code></pre><p>A list contains 0 or 1 item condition:</p><pre><code>head == NULL || head->next == NULL\n</code></pre><p>To split the list, you need to find its middle:</p><pre><code>ahead = atail = head;       // first item\nbtail = head->next;         // second item\nwhile(btail->next != NULL)  // anything left\n{\n    atail = atail->next;\n    btail = btail->next;\n    if( btail->next)\n        btail = btail->next;\n}\nbhead = atail->next;        // disconnect the parts\natail->next = NULL;\n</code></pre><p>To merge two sorted lists:</p><pre><code>if(ahead->value <= bhead->value)  // set the head of resulting list\n    head = tail = ahead, ahead = ahead->next;\nelse\n    head = tail = bhead, bhead = bhead->next;\n\nwhile(ahead && bhead)\n    if(ahead->value <= bhead->value)  // append the next item\n        tail = tail->next = ahead, ahead = ahead->next;\n    else\n        tail = tail->next = bhead, bhead = bhead->next;\n\nif(ahead) // once one part got exhausted append the remaining other part\n    tail->next = ahead;\nelse\n    tail->next = bhead;\n</code></pre></body></html>",
+            "link": "http://stackoverflow.com/questions/28545611/mergesort-on-linked-list",
+            "question": "MergeSort on Linked List",
+            "vote":2
+        },
+        {
+            "answer": "<html><body><p>The main issue in the merge step occurs in the case when one sublist is exhausted first. The remainder of the other list is appended to the end of the merge list but none of the prev pointers are being maintained. At the bottom of mergeList(), it should look like this:</p><pre><code>    if (first1 == NULL) {\n        lastSmall->next = first2;\n        first2->prev = lastSmall; <------\n    }\n    else {\n        lastSmall->next = first1;\n        first1->prev = lastSmall; <------\n    }\n    return newHead;\n</code></pre><p>Also, there asymmetry in the main while loop that seems like a mistake</p><pre><code>    while ((first1 != NULL) && (first2 != NULL))\n    {\n        if (first1->data < first2->data)\n        {\n            first1->prev = lastSmall; <------ missing?\n            lastSmall->next = first1;\n            lastSmall = lastSmall->next;\n            first1 = first1->next;\n        }\n        else\n</code></pre><p>Lastly, there are a few places where an single element list isn't being handled properly, e.g. addToFront().</p><p>Hope that helps!</p></body></html>",
+            "link": "http://stackoverflow.com/questions/29159099/trouble-implementing-merge-sort-on-doubly-linked-list-in-c",
+            "question": "Trouble implementing merge sort on doubly-linked list in C++",
+            "vote":2
+        },
+        {
+            "answer": "<html><body><p>If you look at this paragraph from wikipedia </p><p>Conceptually, a merge sort works as\n  follows</p><p>This tells you pretty succinctly what you need to do and what kind of operations you need. sentences 2 and 4 are operations that you need to be able to do <code>Split()</code> and <code>Merge()</code>. Split could be implemented on your <code>Node</code> class as </p><pre><code>// Split: removes half of the list and returns a pointer to it\nNode* Node::Split()\n{\n} \n</code></pre><p>similarly Merge could be implemented as </p><pre><code>// Merge: insert elements from source in order\nNode::Merge(Node* source)\n{\n}\n</code></pre><p>as a whole 1,2,3,4 describe what you need to do to perform the actual sorting implement these steps in order in the sorting function by using the list operations Merge and Split.</p><p>This is only one way <code>Merge</code> and <code>Split</code> could look like, how you implement them will depend on your style, requirements, knowledge of c++ and various other factors. (I am sure you will see some other solutions in the answers). You will probably also need a <code>Node::Append(Node* val)</code> or something similar as a basic operator. It does not look like you will need <code>Node::Remove(Node* val)</code> but it might not hurt to implement that too.</p></body></html>",
+            "link": "http://stackoverflow.com/questions/5833578/mergesort-on-a-singly-linked-list-c",
+            "question": "Mergesort on a Singly Linked List C++",
+            "vote":2
+        }
+    ]
+}
