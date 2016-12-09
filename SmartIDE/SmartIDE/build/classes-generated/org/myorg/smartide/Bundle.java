@@ -3,21 +3,21 @@ package org.myorg.smartide;
 @javax.annotation.Generated(value="org.netbeans.modules.openide.util.NbBundleProcessor")
 class Bundle {
     /**
-     * @return <i>Smart Fix</i>
+     * @return <i>Smart Search</i>
      * @see SmartFix
      */
     static String CTL_SmartFix() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_SmartFix");
     }
     /**
-     * @return <i>SmartFix</i>
+     * @return <i>Smart Search</i>
      * @see SmartFixTopComponent
      */
     static String CTL_SmartFixAction() {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_SmartFixAction");
     }
     /**
-     * @return <i>SmartFix Window</i>
+     * @return <i>Smart Search</i>
      * @see SmartFixTopComponent
      */
     static String CTL_SmartFixTopComponent() {
@@ -31,7 +31,7 @@ class Bundle {
         return org.openide.util.NbBundle.getMessage(Bundle.class, "CTL_SmartSearch");
     }
     /**
-     * @return <i>This is a SmartFix window</i>
+     * @return <i>Smart Search</i>
      * @see SmartFixTopComponent
      */
     static String HINT_SmartFixTopComponent() {

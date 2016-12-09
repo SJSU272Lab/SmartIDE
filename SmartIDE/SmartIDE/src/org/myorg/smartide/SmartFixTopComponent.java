@@ -36,24 +36,25 @@ import org.openide.util.NbBundle.Messages;
         preferredID = "SmartFixTopComponent"
 )
 @Messages({
-    "CTL_SmartFixAction=SmartFix",
-    "CTL_SmartFixTopComponent=SmartFix Window",
-    "HINT_SmartFixTopComponent=This is a SmartFix window"
+    "CTL_SmartFixAction=Smart Search",
+    "CTL_SmartFixTopComponent=Smart Search",
+    "HINT_SmartFixTopComponent=Smart Search"
 })
 public final class SmartFixTopComponent extends TopComponent {
 
     private final SmartFixTopComponent self;
+    private ResultSet resultSet = new ResultSet();
     private ArrayList<Answer> answers = new ArrayList<>();
     private int answerIterator = 0;
-    private String answerMarkedText = "===\nThank you!\nYour answer has been recorded.\n===\n\n";
+    private String answerMarkedText = "===<br>Thank you!<br>Your answer has been recorded.<br>===<br><br>";
     
     public SmartFixTopComponent() {
         initComponents();
         setName(Bundle.CTL_SmartFixTopComponent());
         setToolTipText(Bundle.HINT_SmartFixTopComponent());
         putClientProperty(TopComponent.PROP_KEEP_PREFERRED_SIZE_WHEN_SLIDED_IN, Boolean.TRUE);
-        textArea.setLineWrap(true);
-        textArea.setWrapStyleWord(true);
+        textArea.setEditable(false);
+        textArea.setContentType("text/html");
         self = this;
     }
     
@@ -74,12 +75,13 @@ public final class SmartFixTopComponent extends TopComponent {
             reader.close();
 
             Gson g = new Gson();
-            ResultSet resultSet = g.fromJson(message, ResultSet.class);
+            resultSet = g.fromJson(message, ResultSet.class);
             answers = resultSet.getResultSet();
             
             showComponent();
-            questionText.setText(resultSet.getQuestion());
+            questionText.setText(answers.get(answerIterator).getQuestion());
             jLabel1.setText(answerIterator+1 + "/" + answers.size());
+            voteText.setText(String.valueOf(answers.get(answerIterator).getVote()));
             nextButton.setEnabled(true);
             answerButton.setEnabled(true);
             
@@ -106,18 +108,20 @@ public final class SmartFixTopComponent extends TopComponent {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        textArea = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jEditorPane1 = new javax.swing.JEditorPane();
         answerButton = new javax.swing.JButton();
         nextButton = new javax.swing.JButton();
         answerLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         questionLabel = new javax.swing.JLabel();
         questionText = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        textArea = new javax.swing.JEditorPane();
+        voteLabel = new javax.swing.JLabel();
+        voteText = new javax.swing.JLabel();
 
-        textArea.setColumns(20);
-        textArea.setRows(5);
-        jScrollPane1.setViewportView(textArea);
+        jScrollPane2.setViewportView(jEditorPane1);
 
         org.openide.awt.Mnemonics.setLocalizedText(answerButton, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.answerButton.text")); // NOI18N
         answerButton.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +150,13 @@ public final class SmartFixTopComponent extends TopComponent {
         questionText.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         questionText.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
+        jScrollPane3.setViewportView(textArea);
+
+        voteLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        org.openide.awt.Mnemonics.setLocalizedText(voteLabel, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.voteLabel.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(voteText, org.openide.util.NbBundle.getMessage(SmartFixTopComponent.class, "SmartFixTopComponent.voteText.text")); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -153,20 +164,23 @@ public final class SmartFixTopComponent extends TopComponent {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 429, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(questionLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(questionText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(nextButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
+                        .addComponent(answerButton))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(answerLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(nextButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(answerButton)))
+                        .addComponent(voteLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(voteText)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -179,10 +193,12 @@ public final class SmartFixTopComponent extends TopComponent {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(answerLabel)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel1)
+                    .addComponent(voteLabel)
+                    .addComponent(voteText))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 272, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nextButton)
                     .addComponent(answerButton))
@@ -197,14 +213,25 @@ public final class SmartFixTopComponent extends TopComponent {
             answerButton.setEnabled(false);
             nextButton.setEnabled(false);
             
+            // Change answer vote
+            Answer selectedAnswer = answers.get(answerIterator);
+            selectedAnswer.setVote(selectedAnswer.getVote()+1);
+            
+            // Change results array to just selected answer
+            ArrayList<Answer> answer = new ArrayList<Answer>();
+            answer.add(selectedAnswer);
+            resultSet.setResultSet(answer);
+            
+            // Conver to json
             Gson g = new Gson();
-            String jsonAnswer = g.toJson(answers.get(answerIterator));
+            String jsonAnswer = g.toJson(resultSet);
             
             // TODO send jsonAnswer back to controller
             
             // update output
             String message = textArea.getText();
             message = answerMarkedText + message;
+            voteText.setText(String.valueOf(selectedAnswer.getVote()));
             textArea.setText(message);
             textArea.setCaretPosition(0);
         }
@@ -224,17 +251,23 @@ public final class SmartFixTopComponent extends TopComponent {
         textArea.setCaretPosition(0);
         
         jLabel1.setText(answerIterator+1 + "/" + answers.size());
+        voteText.setText(String.valueOf(answers.get(answerIterator).getVote()));
+        questionText.setText(answers.get(answerIterator).getQuestion());
     }//GEN-LAST:event_nextButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton answerButton;
     private javax.swing.JLabel answerLabel;
+    private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JButton nextButton;
     private javax.swing.JLabel questionLabel;
     private javax.swing.JLabel questionText;
-    private javax.swing.JTextArea textArea;
+    private javax.swing.JEditorPane textArea;
+    private javax.swing.JLabel voteLabel;
+    private javax.swing.JLabel voteText;
     // End of variables declaration//GEN-END:variables
     @Override
     public void componentOpened() {

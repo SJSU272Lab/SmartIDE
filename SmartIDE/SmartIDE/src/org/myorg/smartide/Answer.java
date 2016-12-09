@@ -13,6 +13,7 @@ public class Answer {
     private String question;
     private String answer;
     private String link;
+    private int vote;
     
     public void setQuestion(String q)
     {
@@ -41,4 +42,12 @@ public class Answer {
         return link;
     }
     
+    public void setVote(int v)
+    {
+        vote = v;
+    }
+    public int getVote()
+    {
+        return vote;
+    }
 }

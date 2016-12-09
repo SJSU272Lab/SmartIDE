@@ -13,25 +13,47 @@ def api_GET_PUT_DELETE(keyword):
         #if request.headers['Content-Type'] != 'application/json':
         #    abort(404)
 
-        #First, check the database
-        r_db = requests.get('http://localhost:3000/insertRecord')
-        print r_db.text
-        #Then, search the google 
+
+        #First, search the google 
         r_google = requests.get('http://localhost:4000/search?question=%s'%keyword)
+        dictA = json.loads(r_google.text)
+        dictA["question"] =  keyword.replace("---", " ")
+        #print dictA
+        
+        #Then, check the database by using the keyword google gave
+        keyword_list = dictA["keywords"]
+        keyword_str = ""
+        for i in range(0,len(keyword_list)):
+            keyword_str += keyword_list[i]
+            if i < len(keyword_list)-1:
+                keyword_str += "+"
+        msg_payload_dic = {"keyword":keyword_str}
+        msg_payload = json.dumps(msg_payload_dic)
+        #print msg_payload
+        r_db = requests.post('http://localhost:3000/retrieveRecord', data=msg_payload_dic)
+        #print r_db.text
+        dictB = json.loads(r_db.text)
+        #print dictB
+
+
 
         #Then, search the QA system
-        r_QA = requests.get('http://localhost:2666/qa/%s'%keyword.replace(' ', '---'))
-
-        dictA = json.loads(r_db.text)
-        dictB = json.loads(r_google.text)
+        r_QA = requests.get('http://localhost:2666/qa/%s'%keyword)
         dictC = json.loads(r_QA.text)
+        #print dictC
+        
 
+
+
+
+        ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
+        ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
+        ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
         merged_dict = {key: value for (key, value) in (dictA.items() + dictB.items() + dictC.items() )}
+        #merged_dict = {key: value for (key, value) in (dictB.items() + dictC.items() )}
 
         # string dump of the merged dict
         r = json.dumps(merged_dict)
-
-
 
         js = r
         #js_dic = { "postID": postID } 
@@ -66,11 +88,29 @@ def api_POST():
             abort(404)
 
         resp_dict = json.loads(request.data)
-   
-        js = json.dumps(resp_dict)
+        
+        ## unmarshal the post request
+        msg_payload_dic = {
+            "keyword":[
+                "operator",
+                "difference",
+                "java",
+                "c"
+            ], 
+            "question":"What does the \"+=\" operator do in Java?", 
+            "answer": "<html><body><p></p></body></html>" , 
+            "votes": "10" , 
+            "link": "http://stackoverflow.com/questions/106820/what-is-java-ee"         
+        }
+        #insert it into DB
+        r_db = requests.post('http://localhost:3000/retrieveRecord', data=msg_payload_dic)
 
-        #print js
-        #print json.loads(js)
+
+
+        js = json.dumps(resp_dict)
+        print js
+
+
         resp = Response(js, status=201, mimetype='application/json')
         return resp
 

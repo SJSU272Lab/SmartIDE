@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class ResultSet {
     private String question;
     private ArrayList<Answer> result = new ArrayList<>();
+    private ArrayList<String> keywords = new ArrayList<>();
     
     public void setQuestion(String q)
     {
@@ -33,4 +34,12 @@ public class ResultSet {
         return result;
     }
     
+    public void setKeywords(ArrayList<String> k)
+    {
+        keywords = k;
+    }
+    public ArrayList<String> getKeywords()
+    {
+        return keywords;
+    }
 }

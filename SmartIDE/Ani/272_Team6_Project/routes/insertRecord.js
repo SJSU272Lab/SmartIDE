@@ -2,13 +2,15 @@ var express = require('express');
 var router = express.Router();
 var mq_client = require('../rpc/client');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
+/* POST insert */
+router.post('/', function(req, res, next) {
 	var json_responses = '';
-	var newQuestion = 'Mongoose promise error';
-	var newAnswer = "With mongoose@4.1 you can use any promises that you want var mongoose = require('mongoose'); mongoose.Promise = require('bluebird');";
-	var link = "http://www.stackoverflow.com/"; 
-	var msg_payload = {"question": newQuestion, "answer": newAnswer, "link": link};
+	var keyword = req.body.keyword;
+	var newAnswer = req.body.answer;
+	var question = req.body.question;
+	var link = req.body.link; 
+	var vote = req.body.vote;
+	var msg_payload = {"keyword": keyword, "answer": newAnswer, "link": link, "votes": vote, "question": question};
 	
 	mq_client.make_request('insertRecord_queue',msg_payload, function(err,results){
 		console.log(results);

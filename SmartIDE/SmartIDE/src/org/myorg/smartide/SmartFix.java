@@ -7,9 +7,6 @@ package org.myorg.smartide;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URL;
 import javax.swing.text.JTextComponent;
 import org.netbeans.api.editor.EditorRegistry;
 import org.openide.cookies.EditorCookie;
@@ -33,7 +30,7 @@ import org.openide.windows.WindowManager;
     ,
   @ActionReference(path = "Editors/text/x-java/Popup", position = 1455, separatorBefore = 1442, separatorAfter = 1467)
 })
-@Messages("CTL_SmartFix=Smart Fix")
+@Messages("CTL_SmartFix=Smart Search")
 public final class SmartFix implements ActionListener {
 
     private final EditorCookie context;
