@@ -12,19 +12,23 @@ class googleresult(object):
 	def __init__(self, ques, lnk):
 		self.question = ques
 		self.link = lnk
+		htmltxt = urllib.urlopen(lnk).read()
+		self.soup = soup = BeautifulSoup(htmltxt, "html.parser")
 		self.answer = ""
 		self.keywords = []
+		self.vote = 0
 	def get_ques(self):
 		return self.question
 	def get_link(self):
 		return self.link
 	def get_dict(self):
-		return {"question": self.get_ques(), "link": self.get_link(), "answer": self.get_ans()}
+		return {"question": self.get_ques(), "link": self.get_link(), "answer": self.get_ans(), "vote": self.get_vote()}
 	def get_ans(self):
-		htmltxt = urllib.urlopen(self.link).read()
-		soup = BeautifulSoup(htmltxt, "html.parser")
+		# if tag != None:
+		# 	for tag_in in tag.findAll(['p', 'pre']):
+			
 		''' parse multi answers
-		for tag in soup.findAll('td', { 'class' : 'answercell'}):
+		for tag in self.soup.findAll('td', { 'class' : 'answercell'}):
 			ans = ""
 			for tag_all in tag.findAll(['p', 'pre']):
 		
@@ -34,12 +38,13 @@ class googleresult(object):
 		'''
 		# parse single answer
 		ans = "<html><body>"
-		tag = soup.find('td', { 'class' : 'answercell'})
+		tag = self.soup.find('td', { 'class' : 'answercell'})
 		if tag != None:
-			for tag_in in tag.findAll(['p', 'pre']):
-				ans += str(tag_in)
+			
+			for tag_ans in tag.findAll(['p', 'pre']):
+				ans += str(tag_ans)
 				# return string format instead of html format
-				# for tag_string in tag_in.strings:
+				# for tag_string in tag_ans.strings:
 				# 	ans += tag_string
 		ans = ans + "</body></html>"
 		self.answer = ans
@@ -60,7 +65,6 @@ class googleresult(object):
 		# 		print entity.name
 		# 		self.keywords.append(entity.name)
 		print json.dumps(ret, indent=2)
-
 		return self.keywords
 		'''
 		# use entire paragraph and use rake for keyword extraction
@@ -75,3 +79,12 @@ class googleresult(object):
 		paragraph = self.question + ". " + paragraph
 		return paragraph
 		'''
+	def get_vote(self):
+		tag = self.soup.find('div', { 'class' : 'answer'})
+		if tag != None:
+			tag_vote = tag.find('span', { 'class' : 'vote-count-post'})
+			# self.vote = int(tag_vote.strings)
+		self.vote = int(tag_vote.string)
+		return self.vote
+
+
