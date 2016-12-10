@@ -10,6 +10,12 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.netbeans.api.settings.ConvertAsProperties;
 import org.openide.awt.ActionID;
 import org.openide.awt.ActionReference;
@@ -42,6 +48,7 @@ import org.openide.util.NbBundle.Messages;
 })
 public final class SmartFixTopComponent extends TopComponent {
 
+    private String controllerAPI = "http://localhost:1314/controller/";
     private final SmartFixTopComponent self;
     private ResultSet resultSet = new ResultSet();
     private ArrayList<Answer> answers = new ArrayList<>();
@@ -60,7 +67,6 @@ public final class SmartFixTopComponent extends TopComponent {
     
     public void search(String searchText) {
         try{
-            String controllerAPI = "http://localhost:1314/controller/";
             String keyWord = searchText.replaceAll(" ", "---");
             URL url = new URL(controllerAPI+keyWord);
             System.out.println(controllerAPI+keyWord);
@@ -227,6 +233,13 @@ public final class SmartFixTopComponent extends TopComponent {
             String jsonAnswer = g.toJson(resultSet);
             
             // TODO send jsonAnswer back to controller
+            CloseableHttpClient client = HttpClientBuilder.create().build();
+            HttpPost post = new HttpPost(controllerAPI);
+            StringEntity params = new StringEntity(jsonAnswer);
+            
+            post.setEntity(params);
+            post.setHeader("Content-type", "application/json");
+            HttpResponse response = client.execute(post);
             
             // update output
             String message = textArea.getText();
