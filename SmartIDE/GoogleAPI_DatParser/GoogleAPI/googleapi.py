@@ -34,7 +34,7 @@ def searchfor(keyword):
     res = service.cse().list(
         q = keyword,
         lr = 'lang_en',
-        num = '5',
+        num = '10',
         cx = '011247095799164362687:htc6tt21zii',
         ).execute()
     # print json.dumps(res, indent = 4)
