@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartSearch.java</file>
-            <file>file:/C:/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartFix.java</file>
-            <file>file:/C:/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartFixTopComponent.java</file>
-            <file>file:/C:/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SearchPanel.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/Bundle.properties</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartFix.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartFixTopComponent.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SmartSearch.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/ResultSet.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/Answer.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/Installer.java</file>
+            <file>file:/Users/Luckman/Documents/SJSU/Course/2016_Fall/272/Final_Project/Fall16-Team6/SmartIDE/SmartIDE/src/org/myorg/smartide/SearchPanel.java</file>
         </group>
     </open-files>
 </project-private>

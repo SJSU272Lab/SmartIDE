@@ -56,6 +56,7 @@ def api_GET_PUT_DELETE(keyword):
         r = json.dumps(merged_dict)
 
         js = r
+        print js
         #js_dic = { "postID": postID } 
         #js = json.dumps(js_dic)
         resp = Response(js, status=200, mimetype='application/json')
@@ -80,7 +81,7 @@ def api_GET_PUT_DELETE(keyword):
         return resp
 
 
-@app.route('/controller', methods = ['POST'])
+@app.route('/controller/', methods = ['POST'])
 def api_POST():
     if request.method == 'POST':    
 
@@ -89,23 +90,19 @@ def api_POST():
 
         resp_dict = json.loads(request.data)
         
-        ## unmarshal the post request
+        # ## unmarshal the post request
         msg_payload_dic = {
-            "keyword":[
-                "operator",
-                "difference",
-                "java",
-                "c"
-            ], 
-            "question":"What does the \"+=\" operator do in Java?", 
-            "answer": "<html><body><p></p></body></html>" , 
-            "votes": "10" , 
-            "link": "http://stackoverflow.com/questions/106820/what-is-java-ee"         
+             "keyword": resp_dict["keywords"],
+
+            "question": resp_dict["result"][0]["question"], 
+            "answer": resp_dict["result"][0]["answer"], 
+            "votes": resp_dict["result"][0]["vote"] , 
+            "link": resp_dict["result"][0]["link"]         
         }
+
+
         #insert it into DB
-        r_db = requests.post('http://localhost:3000/retrieveRecord', data=msg_payload_dic)
-
-
+        r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
 
         js = json.dumps(resp_dict)
         print js
