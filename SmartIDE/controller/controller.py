@@ -6,6 +6,27 @@ import requests
 app = Flask(__name__)
 
 
+## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
+def mergeDict(dictA, dictB, dictC):
+    dictC_result = [{ "answer":dictC["QA"]["Answer"], "question":dictC["QA"]["Question"] }]
+    dictB_result = dictB
+    dictA_result = dictA["result"]
+
+    print dictB_result[0]
+
+    merged_result = []
+    merged_result.extend(dictC_result)
+    merged_result.extend(dictB_result)
+    merged_result.extend(dictA_result)
+
+    merged_dict = {
+        "keywords":dictA["keywords"],
+        "question":dictA["question"],
+        "result": merged_result
+    }
+    return merged_dict
+
+
 @app.route('/controller/<keyword>', methods = ['GET', 'PUT', 'DELETE'])
 def api_GET_PUT_DELETE(keyword):
     if request.method == 'GET':
@@ -35,6 +56,16 @@ def api_GET_PUT_DELETE(keyword):
         dictB = json.loads(r_db.text)
         #print dictB
 
+        dictB_extract = []
+        for i in range(0,len(dictB["message"])):
+            dictB_extract.append({ 
+                "id": dictB["message"][i]["_id"],
+                "answer": dictB["message"][i]["answer"],
+                "link": dictB["message"][i]["link"],
+                "question": dictB["message"][i]["question"],
+                "vote": dictB["message"][i]["votes"]
+            })
+        #print dictB_extract
 
 
         #Then, search the QA system
@@ -49,14 +80,17 @@ def api_GET_PUT_DELETE(keyword):
         ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
         ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
         ## need to have mechanism to remove the duplicate between   DB   and   GOOGLE
-        merged_dict = {key: value for (key, value) in (dictA.items() + dictB.items() + dictC.items() )}
-        #merged_dict = {key: value for (key, value) in (dictB.items() + dictC.items() )}
+        
+        #merged_dict = {key: value for (key, value) in (dictA.items() + dictB.items() + dictC.items() )}
+        merged_dict_test = mergeDict(dictA, dictB_extract, dictC)
+        #print merged_dict_test
 
         # string dump of the merged dict
-        r = json.dumps(merged_dict)
+        #r = json.dumps(merged_dict)
+        r = json.dumps(merged_dict_test)
 
         js = r
-        print js
+        #print js
         #js_dic = { "postID": postID } 
         #js = json.dumps(js_dic)
         resp = Response(js, status=200, mimetype='application/json')
@@ -89,23 +123,62 @@ def api_POST():
             abort(404)
 
         resp_dict = json.loads(request.data)
-        
-        # ## unmarshal the post request
-        msg_payload_dic = {
-             "keyword": resp_dict["keywords"],
+        print resp_dict
 
-            "question": resp_dict["result"][0]["question"], 
-            "answer": resp_dict["result"][0]["answer"], 
-            "votes": resp_dict["result"][0]["vote"] , 
-            "link": resp_dict["result"][0]["link"]         
-        }
+        # ## unmarshal the post request
+        
+        # Answer is from db ---> UPDATE
+        if "id" in resp_dict["result"][0]:
+            print "!!!!!!!!!!!!!!! Answer is from db"
+            msg_payload_dic = {
+                "id":resp_dict["result"][0],
+                "vote": resp_dict["result"][0]["vote"]
+            }
+            #insert it into DB
+            r_db = requests.post('http://localhost:3000/updateRecord', data=msg_payload_dic)
+
+        # Answer is from google ---> INSERT
+        elif "link" in resp_dict["result"][0]:
+            print "!!!!!!!!!!!!!!! Answer is from google"
+            msg_payload_dic = {
+                "keyword": resp_dict["keywords"],
+                "question": resp_dict["result"][0]["question"], 
+                "answer": resp_dict["result"][0]["answer"], 
+                "vote": resp_dict["result"][0]["vote"], 
+                "link": resp_dict["result"][0]["link"]         
+            }
+            #insert it into DB
+            r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
+
+        # Answer is from google ---> INSERT
+        elif "question" in resp_dict["result"][0]:
+            print "!!!!!!!!!!!!!!! Answer is from QA"
+            msg_payload_dic = {
+                "keyword": resp_dict["keywords"],
+                "question": resp_dict["result"][0]["question"], 
+                "answer": resp_dict["result"][0]["answer"], 
+                "vote": resp_dict["result"][0]["vote"],    
+                "link": ""    
+            }
+            print msg_payload_dic
+            #insert it into DB
+            r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
+
+        print r_db.text
+        # msg_payload_dic = {
+        #     "keyword": resp_dict["keywords"],
+        #     "question": resp_dict["result"][0]["question"], 
+        #     "answer": resp_dict["result"][0]["answer"], 
+        #     "votes": resp_dict["result"][0]["vote"], 
+        #     "link": resp_dict["result"][0]["link"]         
+        # }
 
 
         #insert it into DB
-        r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
+        #r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
 
         js = json.dumps(resp_dict)
-        print js
+        #print js
 
 
         resp = Response(js, status=201, mimetype='application/json')

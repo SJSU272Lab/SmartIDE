@@ -84,6 +84,9 @@ public final class SmartFixTopComponent extends TopComponent {
             resultSet = g.fromJson(message, ResultSet.class);
             answers = resultSet.getResultSet();
             
+            //Luckman
+            answerIterator = 0;
+                    
             showComponent();
             questionText.setText(answers.get(answerIterator).getQuestion());
             jLabel1.setText(answerIterator+1 + "/" + answers.size());

@@ -13,8 +13,10 @@ public class Answer {
     private String question;
     private String answer;
     private String link;
+    // Luckman
+    private String id;
     private int vote;
-    
+        
     public void setQuestion(String q)
     {
         question = q;
@@ -42,6 +44,17 @@ public class Answer {
         return link;
     }
     
+    // Luckman
+    public void setId(String s)
+    {
+        id = s;
+    }
+    // Luckman
+    public String getId()
+    {
+        return id;
+    }
+    
     public void setVote(int v)
     {
         vote = v;
@@ -50,4 +63,5 @@ public class Answer {
     {
         return vote;
     }
+    
 }
