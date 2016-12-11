@@ -1,66 +1,115 @@
-import json
+# import json
 from bs4 import BeautifulSoup
 import urllib
-import time
-import random
+# import time
+# import random
 import rake
-from googleresult import *
-import pymongo
+from pymongo import MongoClient
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
-outTextFile = 'data/db.json'
 
+outTextFile = 'data/QA_ori.data'
+outListFile = 'data/url_ori.list'
+
+I_splitter = "===ID===\n"
 Q_splitter = "===QUESTION===\n"
+L_splitter = "===LINK===\n"
+K_splitter = "===KEYWORDS===\n"
 A_splitter = "===ANSWER===\n"
 
+client = MongoClient()
 
-#for page_num in range(1,1000):
-for page_num in range(1001,4000):
+with open(outListFile) as f:
+    lines = f.readlines()
 
-	print "########### " + str(page_num)
-	# given the stackoverflow page  get the all links  1~1000
-	# http://stackoverflow.com/questions/tagged/java?page=10000&sort=frequent&pagesize=20
-	htmltxt = urllib.urlopen("http://stackoverflow.com/questions/tagged/java?page="+str(page_num)+"&sort=frequent&pagesize=20").read()
-	#print "http://stackoverflow.com/questions/tagged/java?page=1&sort=frequent&pagesize=20"
+def get_keywords(paragraph):
+    kw_result = []
+    rake_object = rake.Rake("SmartStoplist.txt", 3, 1, 1)
+    keywords = rake_object.run(paragraph)
+    for word in keywords:
+        kw_result.append(word[0])
+        if(len(kw_result) == 5): break
+    return kw_result
+
+num_items = 0
+
+# lines = ['http://stackoverflow.com/questions/513832/how-do-i-compare-strings-in-java']
+
+for line in lines:
+	link = line.rstrip('\n');
+	htmltxt = urllib.urlopen(link).read()
 	soup = BeautifulSoup(htmltxt, "html.parser")
-	lists = []
+	
+	vote = ""
+	question = ""
+	question_post = ""
+	answer = "<html><body>"
+	keywords = []
+	
+	tag = soup.find('div', { 'class' : 'answer'})
+	if tag == None: continue
 
-	root = "http://stackoverflow.com"
-	for tag1 in soup.findAll('div', { 'class' : 'question-summary'}):
-		lists.append(root+str(tag1.find('a', { 'class' : 'question-hyperlink'})['href']))
-		#print str(tag1['href'])
-	for s in lists:
-		print s
-		f_ptr = open(outListFile, 'a')
-		f_ptr.write(s+"\n")		
-		f_ptr.close()
-		time.sleep(random.randint(0,1))
+	# find vote tag
+	tag_vote = tag.find('span', { 'class' : 'vote-count-post'})
+	vote = tag_vote.string
 
-		# for each links get the answer and result
-		#http://stackoverflow.com/questions/35324030/disabling-hibernate-validation-for-specific-methods
-		htmltxt = urllib.urlopen(s).read()
-		soup = BeautifulSoup(htmltxt, "html.parser")
+	# exclude vote less than 10
+	if(vote < 10): continue
+	
+	question = soup.find('h1', {'itemprop': 'name'}).string
 
-		# parse single answer
-		questions = ""
-		tag1 = soup.find('a', { 'class' : 'question-hyperlink'})
-		questions = tag1.text
-		#print questions
+	tag_first_ans = tag.find('td', { 'class' : 'answercell'})	
+	for tag_first_ans_segment in tag_first_ans.findAll(['p', 'pre']):
+		answer += str(tag_first_ans_segment)
+	answer = answer + "</body></html>"
+	
 
-		ans = ""
-		tag = soup.find('td', { 'class' : 'answercell'})
-		if tag != None:
-			for tag_in in tag.findAll(['p', 'pre']):
-				for tag_string in tag_in.strings:
-					ans += tag_string
-					answer = ans
+	tag_ques_post = soup.find('td', { 'class' : 'postcell'})
+	for tag_ques_post_segment in tag_ques_post.findAll('p'):
+		if tag_ques_post_segment.find('pre'): continue
+		for tag_pos in tag_ques_post_segment.strings:
+			question_post += tag_pos + " "
 
-		#print ans
-		f_ptr = open(outTextFile, 'a')
-		try:
-			f_ptr.write(Q_splitter+str(questions)+"\n")
-			f_ptr.write(A_splitter+str(ans)+"\n\n")	
-		except Exception, e:
-			print e
-			
-			
-		f_ptr.close()
+	keywords = get_keywords(question_post + " " + question)
+
+
+	db = client['record']
+	collection = db['records']
+	insertID = collection.insert({
+		"link" : link,
+		"answer" : answer,
+		"question" : question,
+		"keyword" : keywords,
+		"votes" : vote
+	})
+
+	# print Q_splitter
+	# print link
+	# print question
+	# print question_post
+	# print "\n"
+	# print A_splitter
+	key_list = ""
+	for w in keywords:
+		key_list += w + " "
+	
+	# print key_list + "\n"
+	# print answer
+
+	f_ptr = open(outTextFile, 'a')
+	try:
+		f_ptr.write(I_splitter + str(insertID) + "\n")
+		f_ptr.write(Q_splitter + str(question) + "\n" + str(question_post) + "\n")
+		f_ptr.write(L_splitter + link + "\n")
+		f_ptr.write(K_splitter + key_list + "\n")
+		f_ptr.write(A_splitter + str(vote) + "\n" + str(answer) + "\n\n")	
+	except Exception, e:
+		print e		
+	f_ptr.close()
+
+	num_items += 1
+	if num_items == 500: break
+	
+	# break
