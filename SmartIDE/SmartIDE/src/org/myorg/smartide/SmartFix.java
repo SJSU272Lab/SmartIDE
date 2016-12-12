@@ -26,8 +26,6 @@ import org.openide.windows.WindowManager;
         displayName = "#CTL_SmartFix"
 )
 @ActionReferences({
-    @ActionReference(path = "Menu/Window", position = 1050, separatorBefore = 1025, separatorAfter = 1075)
-    ,
   @ActionReference(path = "Editors/text/x-java/Popup", position = 1455, separatorBefore = 1442, separatorAfter = 1467)
 })
 @Messages("CTL_SmartFix=Smart Search")
