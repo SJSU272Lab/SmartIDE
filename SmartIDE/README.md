@@ -1,6 +1,29 @@
 # SMART IDE 
 *Team6*
 
+## How to Run
+[Step 0] Install the SmartIDE plugin on Netbeans
+
+
+[Step 1] Run Controller service
+0.go to controller/
+1.docker build -t controller 
+2.docker run -d -p 1314:1314 controller
+
+[Step 2] Run QA bot service
+0.go to QA/
+1.docker build -t qa .
+2.docker run -d -p 2666:2666 qa
+
+[Step 3] Run Google Search API service
+0.go to GoogleAPI_DatParser/
+1.docker build -t GoogleAPI .
+2.docker run -d -p 2666:2666 GoogleAPI
+
+[Step 4] Run DB service
+
+
+
 ## Abstract
 
 As programmers, when writing code, we come across errors. It is very often we have to open our browsers and search for solutions manually. This takes time and sometimes we don't even know the right question to ask to get relative answers. Our idea is to develop a plugin tool or a new function on existing open source IDE to make it "smarter". We expect our new function could be able to improve IDE, such as Eclipse, not only fixing syntax or semantic errors, but also tries to provide solutions for other compiler and runtime errors which current IDE do not provide. 

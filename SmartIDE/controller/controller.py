@@ -69,6 +69,8 @@ def mergeDict(dictA, dictB, dictC):
         merged_dict = {}
     return merged_dict
 
+#IP = "localhost"
+IP = "192.168.99.100"
 
 @app.route('/controller/<keyword>', methods = ['GET', 'PUT', 'DELETE'])
 def api_GET_PUT_DELETE(keyword):
@@ -80,7 +82,7 @@ def api_GET_PUT_DELETE(keyword):
 
         #First, search the google 
         try:
-            r_google = requests.get('http://localhost:4000/search?question=%s'%keyword)
+            r_google = requests.get('http://192.168.99.100:4000/search?question=%s'%keyword)
             dictA = json.loads(r_google.text)
             dictA["question"] =  keyword.replace("---", " ")
         except:
@@ -104,7 +106,7 @@ def api_GET_PUT_DELETE(keyword):
         
 
         try:
-            r_db = requests.post('http://localhost:3000/retrieveRecord', data=msg_payload_dic)
+            r_db = requests.post('http://192.168.99.100:3000/retrieveRecord', data=msg_payload_dic)
             #print r_db.text
             dictB = json.loads(r_db.text)
             #print dictB
@@ -125,7 +127,7 @@ def api_GET_PUT_DELETE(keyword):
 
         #Then, search the QA system
         try:
-            r_QA = requests.get('http://localhost:2666/qa/%s'%keyword).text
+            r_QA = requests.get('http://192.168.99.100:2666/qa/%s'%keyword).text
             dictC = json.loads(r_QA)
         except:
             print "Connection Error on [QA BOT]"
@@ -186,7 +188,7 @@ def api_POST():
             #print msg_payload_dic
             #insert it into DB
             try:
-                r_db = requests.post('http://localhost:3000/updateRecord', data=msg_payload_dic)
+                r_db = requests.post('http://192.168.99.100:3000/updateRecord', data=msg_payload_dic)
             except:
                 print "Connection Error on [DataBase]"
                 resp_dict = { "Error": "Connection Error on [DataBase]"}
@@ -203,7 +205,7 @@ def api_POST():
             }
             #insert it into DB
             try:
-                r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
+                r_db = requests.post('http://192.168.99.100:3000/insertRecord', data=msg_payload_dic)
             except:
                 print "Connection Error on [DataBase]"
                 resp_dict = { "Error": "Connection Error on [DataBase]"}
@@ -221,7 +223,7 @@ def api_POST():
             #print msg_payload_dic
             #insert it into DB
             try:
-                r_db = requests.post('http://localhost:3000/insertRecord', data=msg_payload_dic)
+                r_db = requests.post('http://192.168.99.100:3000/insertRecord', data=msg_payload_dic)
             except:
                 print "Connection Error on [DataBase]"
                 resp_dict = { "Error": "Connection Error on [DataBase]"}
