@@ -48,7 +48,7 @@ import org.openide.util.NbBundle.Messages;
 })
 public final class SmartFixTopComponent extends TopComponent {
 
-    private String controllerAPI = "http://localhost:1314/controller/";
+    private String controllerAPI = "http://192.168.99.100";
     private final SmartFixTopComponent self;
     private ResultSet resultSet = new ResultSet();
     private ArrayList<Answer> answers = new ArrayList<>();

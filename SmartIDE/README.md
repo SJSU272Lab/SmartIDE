@@ -2,23 +2,31 @@
 *Team6*
 
 ## How to Run
-[Step 0] Install the SmartIDE plugin on Netbeans
+[Step 0] Download and install the SmartIDE plugin on Netbeans
 
+0. go to SmartIDE/build
+1. download plugin file "org-myorg-smartide.nbm"
+2. open Netbeans and go to Tools > Plugins > Downloads > Add Plugins...
+3. select downloaded .nbm plugin file
+4. click Install
 
 [Step 1] Run Controller service
-0.go to controller/
-1.docker build -t controller 
-2.docker run -d -p 1314:1314 controller
+
+0. go to controller/
+1. docker build -t controller 
+2. docker run -d -p 1314:1314 controller
 
 [Step 2] Run QA bot service
-0.go to QA/
-1.docker build -t qa .
-2.docker run -d -p 2666:2666 qa
+
+0. go to QA/
+1. docker build -t qa .
+2. docker run -d -p 2666:2666 qa
 
 [Step 3] Run Google Search API service
 0.go to GoogleAPI_DatParser/
 1.docker build -t GoogleAPI .
 2.docker run -d -p 4000:4000 GoogleAPI
+
 
 [Step 4] Run DB service
 
