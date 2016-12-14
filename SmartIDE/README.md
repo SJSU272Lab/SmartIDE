@@ -24,9 +24,9 @@
 
 [Step 3] Run Google Search API service
 
-0.go to GoogleAPI_DatParser/
-1.docker build -t googleapi .
-2.docker run -d -p 4000:4000 googleapi
+0. go to GoogleAPI_DatParser/
+1. docker build -t googleapi .
+2. docker run -d -p 4000:4000 googleapi
 
 
 [Step 4] Run DB service
