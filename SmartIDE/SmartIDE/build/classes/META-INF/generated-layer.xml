@@ -38,36 +38,6 @@
             </file>
         </folder>
     </folder>
-    <folder name="Menu">
-        <folder name="Window">
-            <file name="org-myorg-smartide-SmartFix.shadow">
-                <!--org.myorg.smartide.SmartFix-->
-                <attr name="originalFile" stringvalue="Actions/Debug/org-myorg-smartide-SmartFix.instance"/>
-                <attr intvalue="1050" name="position"/>
-            </file>
-            <file name="org-myorg-smartide-SmartFix-separatorAfter.instance">
-                <!--org.myorg.smartide.SmartFix-->
-                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
-                <attr intvalue="1075" name="position"/>
-            </file>
-            <file name="org-myorg-smartide-SmartFix-separatorBefore.instance">
-                <!--org.myorg.smartide.SmartFix-->
-                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
-                <attr intvalue="1025" name="position"/>
-            </file>
-            <file name="org-myorg-smartide-SmartFixTopComponent.shadow">
-                <!--org.myorg.smartide.SmartFixTopComponent-->
-                <attr name="originalFile" stringvalue="Actions/Window/org-myorg-smartide-SmartFixTopComponent.instance"/>
-            </file>
-        </folder>
-        <folder name="File">
-            <file name="org-myorg-smartide-SmartSearch.shadow">
-                <!--org.myorg.smartide.SmartSearch-->
-                <attr name="originalFile" stringvalue="Actions/File/org-myorg-smartide-SmartSearch.instance"/>
-                <attr intvalue="0" name="position"/>
-            </file>
-        </folder>
-    </folder>
     <folder name="Editors">
         <folder name="text">
             <folder name="x-java">
@@ -89,6 +59,32 @@
                     </file>
                 </folder>
             </folder>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="File">
+            <file name="org-myorg-smartide-SmartSearch.shadow">
+                <!--org.myorg.smartide.SmartSearch-->
+                <attr name="originalFile" stringvalue="Actions/File/org-myorg-smartide-SmartSearch.instance"/>
+                <attr intvalue="0" name="position"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-myorg-smartide-SmartFixTopComponent.shadow">
+                <!--org.myorg.smartide.SmartFixTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-myorg-smartide-SmartFixTopComponent.instance"/>
+                <attr intvalue="1050" name="position"/>
+            </file>
+            <file name="org-myorg-smartide-SmartFixTopComponent-separatorAfter.instance">
+                <!--org.myorg.smartide.SmartFixTopComponent-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="1075" name="position"/>
+            </file>
+            <file name="org-myorg-smartide-SmartFixTopComponent-separatorBefore.instance">
+                <!--org.myorg.smartide.SmartFixTopComponent-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="1025" name="position"/>
+            </file>
         </folder>
     </folder>
     <folder name="Toolbars">

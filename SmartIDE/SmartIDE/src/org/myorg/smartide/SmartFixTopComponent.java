@@ -36,7 +36,7 @@ import org.openide.util.NbBundle.Messages;
 )
 @TopComponent.Registration(mode = "rightSlidingSide", openAtStartup = false)
 @ActionID(category = "Window", id = "org.myorg.smartide.SmartFixTopComponent")
-@ActionReference(path = "Menu/Window" /*, position = 333 */)
+@ActionReference(path = "Menu/Window", position = 1050, separatorBefore = 1025, separatorAfter = 1075)
 @TopComponent.OpenActionRegistration(
         displayName = "#CTL_SmartFixAction",
         preferredID = "SmartFixTopComponent"
