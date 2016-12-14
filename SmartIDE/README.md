@@ -13,7 +13,7 @@
 [Step 1] Run Controller service
 
 0. go to controller/
-1. docker build -t controller 
+1. docker build -t controller .
 2. docker run -d -p 1314:1314 controller
 
 [Step 2] Run QA bot service
