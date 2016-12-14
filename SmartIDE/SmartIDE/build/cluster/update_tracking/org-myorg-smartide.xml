@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><module codename="org.myorg.smartide">
-    <module_version install_time="1481701048904" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1481702667919" last="true" origin="installer" specification_version="1.0">
         <file crc="3194993188" name="config/Modules/org-myorg-smartide.xml"/>
         <file crc="3285359297" name="modules/ext/fluent-hc-4.5.2.jar"/>
         <file crc="1275425522" name="modules/ext/gson-2.2.2.jar"/>
@@ -10,6 +10,6 @@
         <file crc="1180701065" name="modules/ext/httpcore-4.4.4.jar"/>
         <file crc="2378118032" name="modules/ext/httpmime-4.5.2.jar"/>
         <file crc="2767170478" name="modules/ext/java-json.jar"/>
-        <file crc="2809454345" name="modules/org-myorg-smartide.jar"/>
+        <file crc="71404352" name="modules/org-myorg-smartide.jar"/>
     </module_version>
 </module>
