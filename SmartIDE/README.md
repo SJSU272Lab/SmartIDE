@@ -29,10 +29,23 @@
 2. docker run -d -p 4000:4000 googleapi
 
 
-[Step 4] Run DB service
-Running the server is a two step process first we need to run message broker RabbitMQ and then we run the node js server, detailed steps are given, please follow the order.
+[Step 4] Running the DB server is a two step process first we need to run message broker RabbitMQ and then we run the node js server, detailed steps are given, please follow the order.
 
+a.Running the RabbitMQ Server 
 
+0. go to 272_Team6_ProjectRabbitMqServer/
+1. docker pull rabbitmq
+2. docker run -d –hostname smartide-rabbit –name ide-rabbit rabbitmq:3
+3. docker run -d --hostname smartide-rabbit --name some-rabbit -p 15672:15672 rabbitmq:3-management
+4. docker build -f Dockerfile -t smartiderabbit/node .
+5. docker run -d --name smartide-mongo mongo
+6. docker run -d --name rabbit-server -p 7000:7000 --link smartide-mongo:mongodb --link ide-rabbit smartiderabbit/node
+
+b.Running the Node Server
+
+0. go to 272_Team6_Project/
+1. docker build -f Dockerfile -t smartide/node .
+2. docker run -d --name node-server -p 3000:3000 --link rabbit-server --link ide-rabbit smartide/node
 
 ## Abstract
 
