@@ -33,7 +33,7 @@
 
 a.Running the RabbitMQ Server 
 
-0. go to 272_Team6_ProjectRabbitMqServer/
+0. go to /Ani/272_Team6_ProjectRabbitMqServer/
 1. docker pull rabbitmq
 2. docker run -d --hostname smartide-rabbit –name ide-rabbit rabbitmq:3
 3. docker run -d --hostname smartide-rabbit --name some-rabbit -p 15672:15672 rabbitmq:3-management
@@ -43,7 +43,7 @@ a.Running the RabbitMQ Server
 
 b.Running the Node Server
 
-0. go to 272_Team6_Project/
+0. go to /Ani/272_Team6_Project/
 1. docker build -f Dockerfile -t smartide/node .
 2. docker run -d --name node-server -p 3000:3000 --link rabbit-server --link ide-rabbit smartide/node
 
