@@ -30,6 +30,7 @@
 
 
 [Step 4] Run DB service
+Running the server is a two step process first we need to run message broker RabbitMQ and then we run the node js server, detailed steps are given, please follow the order.
 
 
 
