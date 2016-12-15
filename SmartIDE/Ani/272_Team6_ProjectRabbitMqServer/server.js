@@ -5,9 +5,9 @@ var mongoose = require('mongoose');
 var retrieveRecord = require('./services/retrieveRecord');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/record');
+mongoose.connect('mongodb://mongodb/record');
 
-var cnn = amqp.createConnection({host:'127.0.0.1'});
+var cnn = amqp.createConnection({host:'smartide-rabbit});
 
 cnn.on('ready', function(){
 	console.log("listening on queue");
