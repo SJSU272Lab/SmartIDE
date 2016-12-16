@@ -114,5 +114,8 @@ The SMART IDE found two methods in database and recommended both methods to her.
 
 Those two stories are very common problems even for both new and experienced programmers. The first one is that we simply do not understand error messages. The latter one is not knowing the laguage very well. In old fashion, both users would do one common thing: Open browser and google it! Creating a SMART IDE would improve our productivity and also make the lives earsier for other software developers.
 
-Team
-https://github.com/aniruddha-pratap
+* [Team Members](#team-members)
+
+# <a name="team-members"></a>Team Members
+* "Aniruddha Pratap Singh" https://github.com/aniruddha-pratap
+
