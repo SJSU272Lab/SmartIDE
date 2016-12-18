@@ -117,3 +117,5 @@ Those two stories are very common problems even for both new and experienced pro
 # <a name="team-members"></a>Team Members
 * "Aniruddha Pratap Singh" https://github.com/aniruddha-pratap
 * "Janis Vasquez"  https://github.com/jcarolev
+* [Kang-Hua Wu](https://github.com/kanghuawu/)
+* [HsunFu Liu](https://github.com/lucky20511)
